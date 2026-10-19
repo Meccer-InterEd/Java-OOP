@@ -1,0 +1,16 @@
+Lab1
+1. What is a class?
+A class is a blueprint for creating objects.
+
+2. What is an object?
+An object is an instance of a class.
+
+3. Can two objects from the same class have different values?
+yes
+
+Lab2
+1. Explain when a constructor runs.
+A constructor runs when an object is created.
+
+2. Explain what this.brand means.
+this.brand means the brand that belongs to the current object
