@@ -29,11 +29,20 @@ public class Main {
 //        account.withdraw(5000);
 //        account.displayBalance();
 
-        Student student = new Student("Mancoba","101");
-        Teacher teacher = new Teacher("Ancoba","OOP");
+//        Student student = new Student("Mancoba","101");
+//        Teacher teacher = new Teacher("Ancoba","OOP");
+//
+//        student.introduce();
+//        teacher.introduce();
 
-        student.introduce();
-        teacher.introduce();
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+        Animal animal3 = new Cow();
+
+        animal1.makeSound();
+        animal2.makeSound();
+        animal3.makeSound();
+
 
 
 

@@ -17,5 +17,9 @@ Why should invalid amounts be rejected?=>They must be rejected to protect the ac
 LAB 4.
 
 What does extend do?=> The keyword extends allows one class to inherit properties and methods from another class.
- What does super(name) do?=> super(name) calls a constructor in the parent class and passes name to it.
+What does super(name) do?=> super(name) calls a constructor in the parent class and passes name to it.
 
+LAB 5.
+
+2. @Override is an annotation in Java that tells the compiler that a method is intended to replace or redefine a method inherited from a parent class.
+3. This happens because of polymorphism, this means many forms. The same method call can produce different results depending on the actual object being used.
