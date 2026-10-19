@@ -19,7 +19,7 @@ public class Main {
         System.out.println(savings_account.getBalance());
 
 //        LAB 4
-        Student student = new Student("Phuti", "123");
+        Student student = new Student("Phuti", "123", 20, 21);
         student.introduce();
         System.out.println(student.student_number);
         Teacher teacher = new Teacher("Rendi", "JAVA");
@@ -39,5 +39,33 @@ public class Main {
 
         payment1.pay(250);
         payment2.pay(100);
+
+//        LAB 7
+        Student[] students = {
+                new Student("Lindiwe", "S001", 19, 76),
+                new Student("Kabelo", "S002", 21, 48),
+                new Student("Ayesha", "S003", 20, 89),
+                new Student("Thabo", "S004", 18, 63)
+        };
+        double total_marks = 0;
+        int pass_count = 0;
+        double highest_mark = students[0].getMark();
+        for (Student _student : students) {
+            _student.displayDetails();
+            if (_student.hasPassed()) {
+                System.out.println("Result: Pass");
+                pass_count++;
+            } else {
+                System.out.println("Result: Fail");
+            }
+            total_marks += _student.getMark();
+            if (_student.getMark() > highest_mark) {
+                highest_mark = _student.getMark();
+            }
+        }
+        double average_mark = total_marks / students.length;
+        System.out.println("Average: " + average_mark);
+        System.out.println("Students Passed: " + pass_count + " / " + students.length);
+        System.out.println("Highest Mark: " + highest_mark);
     }
 }
