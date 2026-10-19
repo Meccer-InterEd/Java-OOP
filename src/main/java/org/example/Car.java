@@ -18,6 +18,24 @@ package org.example;
 // Yes they can.
 
 //Challenge: Add a startEngine() method.
+
+//Lab 2: Constructors and this
+//Add a constructor to Car:
+//Create objects like this:
+//Car car1 = new Car("BMW", "Black", 2018);
+//Car car2 = new Car("Toyota", "White", 2022);
+
+//Tasks
+// 1. Display both cars.
+
+// 2. Explain when a constructor runs.
+//A constructor runs automatically when a new instance of a class object is created, before the object is used for anything else.
+
+// 3. Explain what this.brand means.
+// Refers to the brand property of the current object being created.
+
+//Challenge: Add a second constructor that accepts only brand and color.
+
 public class Car {
     String brand;
     String colour;
@@ -29,6 +47,12 @@ public class Car {
         year = _year;
     }
 
+    void brandAndColour(String _brand, String _colour){
+        this.brand = _brand;
+        this.colour = _colour;
+        System.out.println("Brand: " + this.brand + " Colour: " + this.colour);
+    }
+
     void displayDetails() {
         System.out.println(brand + " " + colour + " " + year);
     }
@@ -36,4 +60,5 @@ public class Car {
     void startEngine() {
         System.out.println("Starting engine ...");
     }
+
 }
