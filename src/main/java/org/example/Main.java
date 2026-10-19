@@ -64,6 +64,23 @@ public class Main {
                 " Making balance private helps prevent mistakes like that.\n");
         System.out.println("Lab 03 Question 02: Why should invalid amounts" +
                 "be rejected?\n" +
-                "- Invalid amounts breach the rules & defy the logic of the system.");
+                "- Invalid amounts breach the rules & defy the logic of the system.\n\n");
+
+
+        //Lab 04
+        Student student = new Student("Andy","20030314M");
+        Teacher teach = new Teacher("Yanko","Python");
+
+        student.introduce();
+        teach.introduce();
+
+        student.display();
+        teach.display();
+
+        System.out.println("\nLab 04 Question 01: What does `extends` do?\n" +
+                "- extend allows a class to inherit the properties and methods of another class.");
+        System.out.println("\nLab 04 Question 02: What does `super(name)` do?\n" +
+                "- calls the constructor of the parent class with the value of the name parameter" +
+                "passed as an argument");
     }
 }
