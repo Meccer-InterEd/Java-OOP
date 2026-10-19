@@ -12,11 +12,14 @@ public class carMain {
 
        Car car1 = new Car() ;
        car1.brand ="BM";
-       car.color ="Blue";
+       car1.color ="Blue";
        car1.year =2023;
 
       car.displayDetails();
       car1.displayDetails();
+
+      car.startEngine();
+      car1.startEngine();
    }
 
     }
