@@ -16,5 +16,12 @@ public class Main {
         ba.deposit(-50);
         ba.withdraw(500);
         ba.displayBalance();
+
+        Student s = new Student("Tshepo","123456789");
+        s.introduce();
+        s.display();
+        Teacher t = new Teacher("Mudau","Java");
+        t.introduce();
+        t.display();
     }
 }
