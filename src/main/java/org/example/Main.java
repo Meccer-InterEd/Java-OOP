@@ -34,5 +34,14 @@ public class Main {
         Animal animal3 = new Cow();
         animal3.makeSound();
 
+
+        Payment cardpayment = new CardPayment();
+        cardpayment.pay(250);
+
+        Payment cashpayment = new CashPayment();
+        cashpayment.pay(100);
+
+        Payment mobilepayment = new MobilePayment();
+        mobilepayment.pay(500);
         }
     }
