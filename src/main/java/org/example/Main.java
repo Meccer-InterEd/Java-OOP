@@ -8,5 +8,12 @@ public class Main {
         car_1.startEngine();
         car_2.displayDetails();
         car_2.startEngine();
+
+        BankAccount savings_account = new BankAccount();
+        savings_account.deposit(1000);
+        savings_account.withdraw(250);
+        savings_account.deposit(-50);
+        savings_account.withdraw(5000);
+        System.out.println(savings_account.getBalance());
     }
 }
