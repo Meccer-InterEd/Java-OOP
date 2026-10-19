@@ -16,6 +16,8 @@ public class Main {
         car2.displayDetails();
         car3.displayDetails();
 
+        car1.startEngine();
+        car2.startEngine();
 
 
     }
