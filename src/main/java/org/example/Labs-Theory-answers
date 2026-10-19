@@ -1,3 +1,4 @@
+Lab 1
 Questions 1. What is a class?
 - is a template used to create object.
 
@@ -8,7 +9,7 @@ Question 2. What is an object?
 - Yes, two objects from the same class can have different values.
 --------------------------------------------------------------------------------
 
-**Tasks**
+**Tasks**  Lab 2
 1. Display both cars.
 - Both cars displays.
 
@@ -18,3 +19,11 @@ Question 2. What is an object?
 3. Explain what `this.brand` means.
 - Help the you gets the class variable and not the local parameter.
 ---------------------------------------------------------------------------------
+
+Questions  Lab 3
+
+- Why is balance private?
+* balance is private to prevent users from changing its values.
+
+- Why should invalid amounts be rejected?
+* So that the balance remains accurate and realistic.
