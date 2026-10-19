@@ -11,6 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         // lab 1 for  car
+        System.out.println("============LAB 4 ====================");
         Car car1 = new Car("BMW", "Black", 2018);
         Car car2 = new Car("Toyota", "White", 2022);
         Car car3 = new Car("Audi","Gray",2026);
@@ -22,15 +23,23 @@ public class Main {
         car2.startEngine();
 
         // lab 2  for balance account
+        System.out.println("============LAB 2 ====================");
         BankAccount account = new BankAccount();
         account.deposit(1000);
         account.withdraw(250);
         account.deposit(-50);
         account.withdraw(5000);
 
-        System.out.println("Final Balance: $" + account.getBalance());
+        System.out.println("Final Balance: R" + account.getBalance());
         account.displayBalance();
-
+      // lab 3
+        System.out.println("============LAB 3 ====================");
+        Student student = new Student("Thabiso", "S1001");
+        Teacher teacher = new Teacher("Mr Phaka", "Java");
+        student.introduce();
+        teacher.introduce();
+        System.out.println("Student Number: " + student.studentNumber);
+        System.out.println("Subject: " + teacher.subject);
 
     }
 }
