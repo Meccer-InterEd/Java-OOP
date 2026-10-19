@@ -6,11 +6,20 @@ public class Main {
     public static void main(String[] args) {
 
 
-       Car car1 = new Car("Audi","Silver Grey",2026);
-       Car car2 = new Car("Mercedes","Black",2025);
+//       Car car1 = new Car("Audi","Silver Grey",2026);
+//       Car car2 = new Car("Mercedes","Black",2025);
+//
+//
+//       car1.displayDetails();
+//       car2.displayDetails();
 
+        BankAccount account = new BankAccount();
 
-       car1.displayDetails();
-       car2.displayDetails();
+        account.deposit(1000);
+        account.withdraw(250);
+        account.withdraw(-50);
+        account.withdraw(5000);
+
+        account.displayBalance();
     }
 }
