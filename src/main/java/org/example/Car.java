@@ -5,6 +5,7 @@ public class Car {
     String colour;
     int year;
 
+
     void displayDetails() {
         System.out.println(brand + " " + colour + " " + year);
     }

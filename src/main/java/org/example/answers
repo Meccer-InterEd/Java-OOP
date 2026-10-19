@@ -1,0 +1,5 @@
+LAB 1.
+
+1. A class is a template/blueprint used to create objects, it describes the properties and actions that objects can have.
+2. An object is an instance of a class,
+3. Yes, A class defines which properties an object can have, but each object can store different values in those properties.
