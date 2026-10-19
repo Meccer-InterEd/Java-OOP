@@ -32,4 +32,12 @@ public class Car {
     void displayDetails() {
         System.out.println(brand + " " + colour + " " + year);
     }
+
+    void startEngine(){
+        System.out.println("===========================");
+        System.out.println("Starting "+brand+" engine :)");
+        System.out.println("===========================");
+        System.out.println("All systems ready to go!!!!");
+
+    }
 }

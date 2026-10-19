@@ -30,5 +30,8 @@ public class Main {
         System.out.println("Lab 01 Question 03: Can two" +
                 "objects from the same class have different values?\n" +
                 "- Yes, objects of the same class can hold unique data values of their own.\n");
+
+        subaru.startEngine();
+        ford.startEngine();
     }
 }
