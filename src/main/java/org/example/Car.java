@@ -9,4 +9,9 @@ public class Car {
     void displayDetails() {
         System.out.println(brand + " " + colour + " " + year);
     }
+
+    void startEngine() {
+        System.out.println("The engine is running\n");
+    }
+
 }
