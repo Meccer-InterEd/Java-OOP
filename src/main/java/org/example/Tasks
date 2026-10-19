@@ -19,3 +19,7 @@ Lab 4
 - Extends causes a classes to be a child of another parent class
 - super(name) forces the child class to inherit the constructor from the Person class.
 
+Lab 5
+
+-
+-
