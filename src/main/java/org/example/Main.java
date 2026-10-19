@@ -12,6 +12,9 @@ public class Main {
         c2.displayDetails();
         c2.startEngine();
 
-
+        BankAccount ba = new BankAccount();
+        ba.deposit(-50);
+        ba.withdraw(500);
+        ba.displayBalance();
     }
 }
