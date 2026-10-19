@@ -9,5 +9,14 @@ public class Main {
         Car car1 = new Car("Polo GTI","Red",2024);
 
         car1.displayDetails();
+
+        BankAccount account = new BankAccount();
+        account.deposit(1000);
+        account.withdraw(250);
+        account.deposit(-50);
+        account.withdraw(5000);
+       System.out.println( account.getBalance());
+
+
     }
 }

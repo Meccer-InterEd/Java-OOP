@@ -14,3 +14,10 @@ A constructor runs when an object is created.
 
 2. Explain what this.brand means.
 this.brand means the brand that belongs to the current object
+
+Lab 3
+Why is balance private?
+Balance is private so that it is only within the bankAccount class and a class other than bankAccount cant have access to it.
+
+Why should invalid amounts be rejected?
+To prevent errors
