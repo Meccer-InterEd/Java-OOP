@@ -43,6 +43,21 @@ public class Main {
         super(name) calls the constructor of the parent class and passes the name argument to it
          */
 
+        System.out.println("=======================================================");
+
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+        Animal animal3 = new Cow();
+        animal1.makeSound();
+        animal2.makeSound();
+        animal3.makeSound();
+
+
+        /*
+         @override annotation tells compiler that a method is instended to replace/override a method in a superclass.
+         why one method call can produce multiple values is because of polymorphism
+         */
+        System.out.println("=======================================================");
 
         }
 
