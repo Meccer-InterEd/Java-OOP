@@ -21,13 +21,19 @@ public class Main {
 //
 //        car1.displayDetails();
 //        car2.displayDetails();
-        BankAccount account = new BankAccount();
-        account.deposit(1000);
-        account.withdraw(250);
+//        BankAccount account = new BankAccount();
+//        account.deposit(1000);
+//        account.withdraw(250);
+//
+//        account.deposit(-50);
+//        account.withdraw(5000);
+//        account.displayBalance();
 
-        account.deposit(-50);
-        account.withdraw(5000);
-        account.displayBalance();
+        Student student = new Student("Mancoba","101");
+        Teacher teacher = new Teacher("Ancoba","OOP");
+
+        student.introduce();
+        teacher.introduce();
 
 
 

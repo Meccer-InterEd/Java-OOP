@@ -13,3 +13,9 @@ LAB 3.
 
 Why is balance private?=>The private keyword protects the account balance from being changed directly outside the BankAccount class.
 Why should invalid amounts be rejected?=>They must be rejected to protect the accuracy and integrity of the account balance.
+
+LAB 4.
+
+What does extend do?=> The keyword extends allows one class to inherit properties and methods from another class.
+ What does super(name) do?=> super(name) calls a constructor in the parent class and passes name to it.
+
