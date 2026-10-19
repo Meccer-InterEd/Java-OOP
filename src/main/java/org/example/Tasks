@@ -1,0 +1,15 @@
+Lab 1
+
+- A class is blueprint from which an object is created.
+- An object is an instance of a clas meaning it is created from a class.
+- Yes
+
+Lab 2
+
+- A constructor runs when an object is created
+- this.brand refers to the attribute of the class that has been initialized in the constructor when an object was created from the class.
+
+Lab 3
+
+- It can only be accessed within the class we have created
+- Because you cannot deposit negative money and you cannot withdraw more money than you have.
