@@ -22,15 +22,23 @@ public class Main {
 //
 //        account.displayBalance();
 
-        Student student = new Student("Thamsanqa",222203082);
-        Teacher teacher = new Teacher("Gift","Programming");
+//        Student student = new Student("Thamsanqa",222203082);
+//        Teacher teacher = new Teacher("Gift","Programming");
+//
+//        student.introduce();
+//        System.out.print(" my student number is "+student.studentNumber);
+//
+//        System.out.println("\n");
+//
+//        teacher.introduce();
+//        System.out.print(" i teach "+teacher.subject);
 
-        student.introduce();
-        System.out.print(" my student number is "+student.studentNumber);
+        Cat cat = new Cat();
+        Dog dog = new Dog();
 
-        System.out.println("\n");
+        dog.makeSound();
+        cat.makeSound();
 
-        teacher.introduce();
-        System.out.print(" i teach "+teacher.subject);
+        //one method call can produce different results because both subclasses extend the super class and override the method in the superclass to produce a different output
     }
 }
