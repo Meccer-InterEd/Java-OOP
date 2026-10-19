@@ -5,17 +5,10 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-       Car car1 = new Car();
-       Car car2 = new Car();
 
-       car1.brand = "Audi";
-       car2.brand = "Mercedes";
+       Car car1 = new Car("Audi","Silver Grey",2026);
+       Car car2 = new Car("Mercedes","Black",2025);
 
-       car1.colour = "Black";
-       car2.colour = "Silver Grey";
-
-       car1.year = 2026;
-       car2.year = 2026;
 
        car1.displayDetails();
        car2.displayDetails();
