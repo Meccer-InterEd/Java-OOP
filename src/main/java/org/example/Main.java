@@ -50,6 +50,15 @@ public class Main {
         animal1.makeSound();
         animal2.makeSound();
         animal3.makeSound();
+        System.out.println();
+
+        Payment payment = new CardPayment();
+        Payment payment1 = new CashPayment();
+        Payment payment2 = new MobilePayment();
+
+        payment.pay(3000);
+        payment1.pay(5000);
+        payment2.pay(1500);
 
     }
 }

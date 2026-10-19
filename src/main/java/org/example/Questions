@@ -40,3 +40,16 @@ A Java class is a blueprint or template that defines the fields (data) and metho
 
   - Explain why one method call can produce different results.
   They each get print out different results depending on what is executed in the class, while the parent class hold the method execution.
+
+  Lab 6 Questions
+
+  Questions
+
+  1. What does abstract mean?
+  - The abstract keyword is a non-access modifier
+
+  2. Can you create an object directly from an abstract class?
+  - Yes
+
+  3. Why must subclasses implement pay()?
+  - Because the parent class holds the main class
