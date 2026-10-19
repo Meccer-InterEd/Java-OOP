@@ -32,6 +32,12 @@ public class Main {
         animal1.makeSound();
         animal2.makeSound();
 
+        Payment payment1 = new CardPayment();
+        Payment payment2 = new cashPayment();
+
+        payment1.pay(250);
+        payment2.pay(100);
+
 
 
 
