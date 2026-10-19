@@ -16,5 +16,20 @@ public class Main {
             Task 3 - this keyword refers to the current object instance(specific object created or worked with)
             .brand - refers to the variable(attribute) named brand that belongs to the class
          */
+
+        BankAccount accOne = new BankAccount();
+
+        accOne.deposit(1000);
+        System.out.println(accOne.getBalance());
+        accOne.displayBalance();
+        accOne.withdraw(250);
+        System.out.println(accOne.getBalance());
+        accOne.displayBalance();
+        accOne.deposit(-50);
+        System.out.println(accOne.getBalance());
+        accOne.displayBalance();
+        accOne.withdraw(5000);
+        System.out.println(accOne.getBalance());
+        accOne.displayBalance();
         }
     }
