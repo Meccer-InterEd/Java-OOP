@@ -9,8 +9,6 @@ public class Car {
         this.color = color;
         this.year = year;
     }
-
-
     void displayDetails(){
         System.out.println(brand + " " + color + " " + year);
     }
