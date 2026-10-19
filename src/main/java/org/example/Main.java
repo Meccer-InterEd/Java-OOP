@@ -43,10 +43,27 @@ public class Main {
 
         System.out.println("\nLab 02 Task 02: Explain when a constructor runs\n" +
                 "- The constructor runs at the moment of object instantiation. Where our code " +
-                "reads new Car(BMW,Black,2018) is where we effectively\n invoke the constructor.\n");
+                " reads new Car(BMW,Black,2018) is where we effectively\n invoke the constructor.\n");
 
         System.out.println("Lab 02 Task 03: Explain what `this.brand` means.\n" +
                 "- 'this.brand' refers to the brand instance variable of an object of the type" +
-                " matching the class\n within which the 'this.brand' statement is made.\n");
+                "  matching the class\n within which the 'this.brand' statement is made.\n");
+
+        //Lab 03
+        BankAccount account = new BankAccount();
+        account.deposit(1000);
+        account.withdraw(250);
+        account.deposit(-50);
+        account.withdraw(5000);
+        System.out.println(account.getBalance());
+        account.displayBalance();
+
+        System.out.println("\nLab 03 Question 01: Why is `balance` private?\n" +
+                "- To control and restrict data access. Nobody should be able to simply perform " +
+                "'bankAccountObject.balance = 5000000000' and successfully\n  modify the balance." +
+                " Making balance private helps prevent mistakes like that.\n");
+        System.out.println("Lab 03 Question 02: Why should invalid amounts" +
+                "be rejected?\n" +
+                "- Invalid amounts breach the rules & defy the logic of the system.");
     }
 }
