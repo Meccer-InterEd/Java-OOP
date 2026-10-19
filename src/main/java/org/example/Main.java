@@ -19,6 +19,13 @@ public class Main {
         account.deposit(-50);
         account.withdraw(5000);
 
+        Student student = new Student("Karabo", "2527");
+        student.introduce();
+        System.out.println("Student number:" + student.studentNumber);
+        Teacher teacher = new Teacher("Jacobs","Math");
+        teacher.introduce();
+        System.out.println("Subject: " + teacher.subject);
+
 
 
     }
