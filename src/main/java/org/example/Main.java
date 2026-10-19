@@ -5,22 +5,16 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Car firstCar = new Car();
-        firstCar.color = "Black";
-        firstCar.brand = "BMW";
-        firstCar.year = 2024;
-        firstCar.displayDetails();
-        Car secCar = new Car();
-        secCar.color = "Grey";
-        secCar.brand = "Porsche";
-        secCar.year = 2026;
-        secCar.displayDetails();
-        secCar.startEngine();
+        Car car1 = new Car("BMW","Black",2018);
+        car1.displayDetails();
+        Car car2 = new Car("Toyota","White",2022);
+        car2.displayDetails();
+        car2.startEngine();
 
         /*
-            question1 - container/ blueprint or a template that is used to create objects
-            question2 - an object is an instance of a class, entity that has its own data and state
-            question3 - Yes, two objects from the same class can have different values
+            Task 2 - A constructor runs the moment you instantiate a new object of a class using the new keyword
+            Task 3 - this keyword refers to the current object instance(specific object created or worked with)
+            .brand - refers to the variable(attribute) named brand that belongs to the class
          */
         }
     }
