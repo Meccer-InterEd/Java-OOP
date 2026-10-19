@@ -9,3 +9,7 @@ LAB 2.
 2. A constructor runs when an object is created from a class.
 3. It refers to a property called brand belonging to the current object.
 
+LAB 3.
+
+Why is balance private?=>The private keyword protects the account balance from being changed directly outside the BankAccount class.
+Why should invalid amounts be rejected?=>They must be rejected to protect the accuracy and integrity of the account balance.

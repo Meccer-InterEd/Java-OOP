@@ -16,11 +16,19 @@ public class Main {
 //
 //        car1.displayDetails();
 //        car2.displayDetails();
-        Car car1 = new Car("BMW", "Black", 2018);
-        Car car2 = new Car("Toyota", "White", 2022);
+//        Car car1 = new Car("BMW", "Black", 2018);
+//        Car car2 = new Car("Toyota", "White", 2022);
+//
+//        car1.displayDetails();
+//        car2.displayDetails();
+        BankAccount account = new BankAccount();
+        account.deposit(1000);
+        account.withdraw(250);
 
-        car1.displayDetails();
-        car2.displayDetails();
+        account.deposit(-50);
+        account.withdraw(5000);
+        account.displayBalance();
+
 
 
 
