@@ -16,6 +16,11 @@ public class Main {
 
         Car car3 = new Car("Ford", "Blue");
         car3.displayDetails();
+        BankAccount acc=new BankAccount();
+        acc.deposit(1000);
+        acc.withdraw(250);
+        acc.displayBalance();
+
 
     }
 }
