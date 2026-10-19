@@ -32,5 +32,12 @@ public class Main {
         bankAccount.withdraw(5000);
         bankAccount.getBalance();*/
 
+        Student student = new Student("1234567", "Josephine Bleu");
+        Teacher teacher = new Teacher("Hisham Kraft", "Mathematics");
+
+        student.introduce();
+        System.out.println();
+        teacher.introduce();
+
     }
 }
