@@ -81,6 +81,23 @@ public class Main {
                 "- extend allows a class to inherit the properties and methods of another class.");
         System.out.println("\nLab 04 Question 02: What does `super(name)` do?\n" +
                 "- calls the constructor of the parent class with the value of the name parameter" +
-                "passed as an argument");
+                "passed as an argument\n\n");
+
+
+        //Lab 05
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+        Animal cow = new Cow();
+
+        animal1.makeSound();
+        animal2.makeSound();
+        cow.makeSound();
+
+        System.out.println("\nLab 05 Task: Explain @Override\n" +
+                "- Overwrites the original content of the annotated method with custom, class specific behaviour.");
+        System.out.println("\nLab 05 Task: Explain why " +
+                "one method call can produce different results.\n" +
+                "- Each class of the objects which call the method has its own unique implementation" +
+                " of the method logic.");
     }
 }
