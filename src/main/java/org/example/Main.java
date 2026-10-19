@@ -33,12 +33,24 @@ public class Main {
 //        teacher.introduce();
 //        System.out.print(" i teach "+teacher.subject);
 
-        Cat cat = new Cat();
-        Dog dog = new Dog();
-
-        dog.makeSound();
-        cat.makeSound();
+//        Cat cat = new Cat();
+//        Dog dog = new Dog();
+//
+//        dog.makeSound();
+//        cat.makeSound();
 
         //one method call can produce different results because both subclasses extend the super class and override the method in the superclass to produce a different output
+
+    Payment payment1 = new CardPayment();
+    Payment payment2 = new CashPayment();
+    Payment payment3 = new MobilePayment();
+
+        payment1.pay(250);
+        payment2.pay(250);
+        payment3.pay(250);
+
+        //Abstract means to hide complexity
+        //No we cannot create an object from an abstract class
+        //it must implement it to give it a method body because its an extended abstract class that has a methods with no method body defined
     }
 }
