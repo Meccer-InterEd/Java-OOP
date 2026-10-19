@@ -23,6 +23,14 @@ public class Main {
         you be reffering to the same values.
          */
 
+        BankAccount bankAccount = new BankAccount(2000);
+        bankAccount.deposit(1000);
+        bankAccount.withdraw(250);
+        bankAccount.getBalance();
+
+        /*bankAccount.deposit(-50);
+        bankAccount.withdraw(5000);
+        bankAccount.getBalance();*/
 
     }
 }
