@@ -13,13 +13,24 @@ public class Main {
 //       car1.displayDetails();
 //       car2.displayDetails();
 
-        BankAccount account = new BankAccount();
+//        BankAccount account = new BankAccount();
+//
+//        account.deposit(1000);
+//        account.withdraw(250);
+//        account.withdraw(-50);
+//        account.withdraw(5000);
+//
+//        account.displayBalance();
 
-        account.deposit(1000);
-        account.withdraw(250);
-        account.withdraw(-50);
-        account.withdraw(5000);
+        Student student = new Student("Thamsanqa",222203082);
+        Teacher teacher = new Teacher("Gift","Programming");
 
-        account.displayBalance();
+        student.introduce();
+        System.out.print(" my student number is "+student.studentNumber);
+
+        System.out.println("\n");
+
+        teacher.introduce();
+        System.out.print(" i teach "+teacher.subject);
     }
 }
