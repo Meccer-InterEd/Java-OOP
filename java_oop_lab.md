@@ -7,7 +7,7 @@ polymorphism, abstraction\
 
 ## Learning outcomes
 
-By completing these labs, you should be able to create classes and
+By completing these lab1, you should be able to create classes and
 objects, use constructors, protect data with encapsulation, reuse code
 with inheritance, override methods for polymorphism, and use abstract
 classes.
