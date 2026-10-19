@@ -3,22 +3,17 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Car car1 = new Car();
-
-        car1.brand = "Volkswagen";
-        car1.colour = "White";
-        car1.year = 2020;
+        Car car1 = new Car("BMW", "Black", 2018);
 
         car1.displayDetails();
         car1.startEngine();
 
-        Car car2 = new Car();
-
-        car2.brand = "Toyota";
-        car2.colour = "Silver";
-        car2.year = 2018;
+        Car car2 = new Car("Toyota", "White", 2022);
 
         car2.displayDetails();
         car2.startEngine();
+
+        Car car3 = new Car("Volkswagen", "Silver");
+        car3.displayDetails();
     }
 }
