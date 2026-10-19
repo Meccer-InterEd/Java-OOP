@@ -9,6 +9,8 @@ An object is an instance of a class.
  It has its own values for the variables defined in the class.*/
 public class Main {
     public static void main(String[] args) {
+
+        // lab 1 for  car
         Car car1 = new Car("BMW", "Black", 2018);
         Car car2 = new Car("Toyota", "White", 2022);
         Car car3 = new Car("Audi","Gray",2026);
@@ -18,6 +20,16 @@ public class Main {
 
         car1.startEngine();
         car2.startEngine();
+
+        // lab 2  for balance account
+        BankAccount account = new BankAccount();
+        account.deposit(1000);
+        account.withdraw(250);
+        account.deposit(-50);
+        account.withdraw(5000);
+
+        System.out.println("Final Balance: $" + account.getBalance());
+        account.displayBalance();
 
 
     }

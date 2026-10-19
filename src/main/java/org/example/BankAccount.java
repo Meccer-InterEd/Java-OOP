@@ -19,4 +19,7 @@ public class BankAccount {
     public double getBalance() {
         return balance;
     }
+    public void displayBalance() {
+        System.out.println("Current balance: $" + balance);
+    }
 }
