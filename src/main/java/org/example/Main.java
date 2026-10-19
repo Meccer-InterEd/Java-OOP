@@ -67,5 +67,24 @@ public class Main {
            actually reduce the account balance by 5 instead of increasing it and withdrawing an amount greater than the
            balance would allow the user to withdraw more money than they actually have
          */
+
+        Student student = new Student(1235, "Tashleigh");
+        Teacher teacher = new Teacher("English", "Elaine");
+
+        student.introduce();
+        System.out.println("My student number is " + student.studentNumber);
+        teacher.introduce();
+        System.out.println("I teach " + teacher.subject);
+
+        /*
+        Lab 4 Questions:
+
+        1. What does extends do?
+           Extends allows child classes to inherit properties and methods from its parent class
+
+        2. What does super(name) do?
+           super(name) passes the name argument from the child class's constructor to the matching constructor in the
+           parent class, which will allow the parent constructor to initialise the inherited fields
+         */
     }
 }
