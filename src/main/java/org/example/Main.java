@@ -3,19 +3,11 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Car car = new Car();
-        Car car1 = new Car();
+        Car car1 = new Car("Mercedes", "Black", 2022);
+        Car car2 = new Car("BMW", "blue", 2026);
 
-        car.brand = "Mercedes";
-        car.colour = "Black";
-        car.year = 2022;
-
-        car1.brand = "BMW";
-        car1.colour = "Blue";
-        car1.year = 2026;
-
-        car.displayDetails();
         car1.displayDetails();
+        car2.displayDetails();
 
 
 
