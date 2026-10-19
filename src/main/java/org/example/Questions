@@ -16,3 +16,12 @@ A Java class is a blueprint or template that defines the fields (data) and metho
 
  3. Explain what this.brand means.
   - this.brand takes the placeholder inside the constructor and associates it to the initialised variable inside the class.
+
+  Lab 3
+  Questions
+
+  - Why is balance private?
+  We don't want the balance to be manipulated in any way besides using methods that have access to it
+
+  - Why should invalid amounts be rejected?
+  Because then the bank account balance would be manipulated easily

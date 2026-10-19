@@ -18,5 +18,15 @@ public class Main {
         car1.displayDetails();
         car2.displayDetails();
         car.startEngine();
+
+        System.out.println();
+
+        BankAccount bankAccount = new BankAccount();
+
+        bankAccount.deposit(1000);
+        bankAccount.withdraw(250);
+        bankAccount.deposit(-50);
+        bankAccount.withdraw(5000);
+        bankAccount.displayBalance();
     }
 }
