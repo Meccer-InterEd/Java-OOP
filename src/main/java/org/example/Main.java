@@ -26,6 +26,13 @@ public class Main {
         teacher.introduce();
         System.out.println("Subject: " + teacher.subject);
 
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+
+        animal1.makeSound();
+        animal2.makeSound();
+
+
 
 
     }
