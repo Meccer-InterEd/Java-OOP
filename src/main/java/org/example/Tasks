@@ -13,3 +13,9 @@ Lab 3
 
 - It can only be accessed within the class we have created
 - Because you cannot deposit negative money and you cannot withdraw more money than you have.
+
+Lab 4
+
+- Extends causes a classes to be a child of another parent class
+- super(name) forces the child class to inherit the constructor from the Person class.
+
