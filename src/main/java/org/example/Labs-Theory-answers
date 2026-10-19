@@ -1,0 +1,8 @@
+Questions 1. What is a class?
+- is a template used to create object.
+
+Question 2. What is an object?
+- is an instance of a class.
+
+3. Can two objects from the same class have different values?
+- Yes, two objects from the same class can have different values.
