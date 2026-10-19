@@ -41,5 +41,14 @@ public class Main {
         System.out.println("Student Number: " + student.studentNumber);
         System.out.println("Subject: " + teacher.subject);
 
+        System.out.println("============LAB 4 ====================");
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+        Animal animal3 = new Cow();
+
+        animal1.makeSound();
+        animal2.makeSound();
+        animal3.makeSound();
+
     }
 }
