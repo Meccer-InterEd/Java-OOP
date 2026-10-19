@@ -23,5 +23,13 @@ public class Main {
         Teacher t = new Teacher("Mudau","Java");
         t.introduce();
         t.display();
+
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+        Animal animal3 = new Cow();
+
+        animal1.makeSound();
+        animal2.makeSound();
+        animal3.makeSound();
     }
 }
