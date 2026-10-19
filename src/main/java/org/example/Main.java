@@ -42,5 +42,30 @@ public class Main {
            about the field of the class and us talking about the parameter that the constructor accepts
            when both have the same name
          */
+
+        BankAccount bankAccount = new BankAccount();
+
+        bankAccount.deposit(1000);
+        bankAccount.withdraw(250);
+
+        bankAccount.deposit(-50);
+        bankAccount.withdraw(5000);
+
+        bankAccount.displayBalance();
+
+        /*
+        Lab 3 Questions:
+
+        1. Why is balance private
+           Making the balance private helps us to protect the users balance. Code outside of the BankAccount class
+           cannot directly access the balance attribute of the class, only methods inside of the class can manipulate
+           and change the value of the balance
+
+        2. Why should invalid amounts be rejected?
+           Invalid amounts have to be rejected in order to preserve the integrity of the balance. If incorrect/invalid
+           amounts are accepted the users balance could be altered incorrectly, like depositing -5 for example would
+           actually reduce the account balance by 5 instead of increasing it and withdrawing an amount greater than the
+           balance would allow the user to withdraw more money than they actually have
+         */
     }
 }

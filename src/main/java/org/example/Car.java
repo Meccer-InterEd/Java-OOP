@@ -18,7 +18,7 @@ public class Car {
     }
 
     void displayDetails() {
-        System.out.println(brand + " " + colour + " " + year);
+        System.out.println(brand + " " + colour + " " + year + "\n");
     }
 
     void startEngine() {
