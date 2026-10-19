@@ -5,18 +5,17 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Car car=new Car();
-        Car car1=new Car();
-        car.brand="BMW";
-        car.colour="Black";
-        car.year=2026;
 
-        car1.brand="VW";
-        car1.colour="Blue";
-        car1.year=2026;
+        Car car1 = new Car("BMW", "Black", 2018);
+        Car car2 = new Car("Toyota", "White", 2022);
 
-        car.displayDetails();
         car1.displayDetails();
+        car2.displayDetails();
+        car1.startEngine();
+        car2.startEngine();
+
+        Car car3 = new Car("Ford", "Blue");
+        car3.displayDetails();
 
     }
 }
