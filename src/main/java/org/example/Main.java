@@ -38,6 +38,12 @@ public class Main {
         student.introduce();
         System.out.println();
         teacher.introduce();
+        /* 'extends' is a key word in java that means inherits from. So if 'Student' extends 'Person'
+        it simply means that 'Student' class is inheriting from 'Person' class.
+
+        super(name) is basically referring to the variable 'name' in the parent class 'Person' that all the other classes
+        are inheriting from
+         */
 
     }
 }
