@@ -25,3 +25,18 @@ A Java class is a blueprint or template that defines the fields (data) and metho
 
   - Why should invalid amounts be rejected?
   Because then the bank account balance would be manipulated easily
+
+  Lab 4 Questions
+  - What does extends do?
+  Extend creates the relationship between a parent class and a child class
+
+  - What does super(name) do?
+  Super calls the name created in the parent class
+
+  Lab 5 Questions
+
+  - Explain @Override.
+  Indicates that a method declaration is intended to override a method declaration in a supertype.
+
+  - Explain why one method call can produce different results.
+  They each get print out different results depending on what is executed in the class, while the parent class hold the method execution.
