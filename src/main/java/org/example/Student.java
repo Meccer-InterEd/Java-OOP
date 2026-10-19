@@ -5,7 +5,7 @@ public class Student extends Person{
 
     public Student(String name,String studentNumber) {
         super(name);
-        setStudentNumber(studentNumber);
+//        setStudentNumber(studentNumber);
     }
 
     public void setStudentNumber(String studentNumber) {

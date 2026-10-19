@@ -49,6 +49,11 @@ public class Main {
         animal1.makeSound();
         animal2.makeSound();
         animal3.makeSound();
+        System.out.println("============LAB 4 ====================");
+        Payment payment1 = new CardPayment();
+        Payment payment2 = new CashPayment();
+        payment1.pay(250);
+        payment2.pay(100);
 
     }
 }
