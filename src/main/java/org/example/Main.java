@@ -1,5 +1,7 @@
 package org.example;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
     public static void main(String[] args) {
         Car car = new Car("Jeep","White",2020);
@@ -28,5 +30,19 @@ public class Main {
         bankAccount.deposit(-50);
         bankAccount.withdraw(5000);
         bankAccount.displayBalance();
+
+        System.out.println();
+
+        Person person = new Person("Ditebogo");
+        Student student = new Student("Lehutso","221393439");
+        Teacher teacher = new Teacher("Rowen","Physics");
+
+        student.introduce();
+        teacher.introduce();
+        System.out.println(student.name + " " + student.studentNumber );
+        System.out.println(teacher.name + " " + teacher.subject );
+        System.out.println();
+
+
     }
 }
