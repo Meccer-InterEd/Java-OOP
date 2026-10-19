@@ -21,3 +21,10 @@ Balance is private so that it is only within the bankAccount class and a class o
 
 Why should invalid amounts be rejected?
 To prevent errors
+
+Lab 4
+What does extends do?
+It inherits methods from another class
+
+What does super(name) do?
+It calls the constructor of the parent class and passes the name as an argument
