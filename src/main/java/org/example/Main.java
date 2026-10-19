@@ -10,6 +10,10 @@ public class Main {
         Car car1 = new Car("Benz","Red",2023);
         Car car2 = new Car("BMW","White",2024);
 
+        car1.display();
+        car2.display();
+
+
 
 
     }
