@@ -1,0 +1,18 @@
+Lab 1
+Questions 1. What is a class?
+A Java class is a blueprint or template that defines the fields (data) and methods (behavior) shared by all objects created from it.
+
+ 2. What is an object?
+ An object is an instance of a class
+
+ 3. Can two objects from the same class have different values?
+ Yes
+
+ Lab 2
+ 1. Display both cars.
+
+ 2. Explain when a constructor runs.
+  - Constructor runs when an object is created.
+
+ 3. Explain what this.brand means.
+  - this.brand takes the placeholder inside the constructor and associates it to the initialised variable inside the class.
