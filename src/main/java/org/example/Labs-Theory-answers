@@ -37,3 +37,12 @@ Questions Lab 4
 - What does super(name) do?
 * passes the field as argument to its child class.
 ------------------------------------------------------------------------------------
+Questions Lab 5
+
+1. Explain @Override.
+- allows a subclass to provide a specific implementation of a method that
+  is already defined in its parent class.
+
+2. Explain why one method call can produce different results.
+- produces different results due to the input parameters provided.
+---------------------------------------------------------------------------------------
