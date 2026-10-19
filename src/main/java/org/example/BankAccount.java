@@ -20,6 +20,6 @@ public class BankAccount {
     }
 
     void displayBalance() {
-        System.out.print("Available balance is: R" + getBalance());
+        System.out.println("Available balance is: R" + getBalance());
     }
 }

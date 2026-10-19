@@ -27,3 +27,13 @@ Questions  Lab 3
 
 - Why should invalid amounts be rejected?
 * So that the balance remains accurate and realistic.
+----------------------------------------------------------------------------------
+
+Questions Lab 4
+
+- What does extends do?
+* extents keyword makes the child class inherits from its parent class.
+
+- What does super(name) do?
+* passes the field as argument to its child class.
+------------------------------------------------------------------------------------

@@ -13,12 +13,20 @@ public class Main {
         BankAccount account1 = new BankAccount();
         account.deposit(1000);
         account.withdraw(250);
-        System.out.print("Balance is: R" + account.getBalance());
+        System.out.println("Balance is: R" + account.getBalance());
 
         account1.deposit(-50);
         account1.withdraw(5000);
-        System.out.print("\nBalance is: R" + account1.getBalance());
+        System.out.println("Balance is: R" + account1.getBalance());
 
+        Student student = new Student("Siyabonga", "218253974");
+        Teacher teacher = new Teacher("Rhendi", "OOP");
+
+        student.introduce();
+        System.out.println("And my student number is: " + student.studentNumber);
+
+        teacher.introduce();
+        System.out.println("And the subject I teach is: " + teacher.subject);
 
 
     }
