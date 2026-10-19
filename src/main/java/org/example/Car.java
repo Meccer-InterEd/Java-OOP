@@ -12,6 +12,11 @@ public class Car {
         this.year = year;
     }
 
+    public Car(String brand, String colour) {
+        this.brand = brand;
+        this.colour = colour;
+    }
+
     void displayDetails() {
         System.out.println(brand + " " + colour + " " + year);
     }

@@ -6,3 +6,15 @@ Question 2. What is an object?
 
 3. Can two objects from the same class have different values?
 - Yes, two objects from the same class can have different values.
+--------------------------------------------------------------------------------
+
+**Tasks**
+1. Display both cars.
+- Both cars displays.
+
+2. Explain when a constructor runs.
+- A constructor runs when a new instance of a class is created.
+
+3. Explain what `this.brand` means.
+- Help the you gets the class variable and not the local parameter.
+---------------------------------------------------------------------------------
