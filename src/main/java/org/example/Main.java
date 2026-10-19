@@ -14,5 +14,15 @@ public class Main {
         bankAccount.deposit(-50);
         bankAccount.withdraw(5000);
         bankAccount.displayBalance();
+
+
+        Teacher teacher = new Teacher("Life Orientation", "Kagiso");
+        teacher.displayTeacher();
+        teacher.introduce();
+
+        Student student = new Student("218044682", "Shaun");
+        student.displayStudent();
+        student.introduce();
+
         }
     }
