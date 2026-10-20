@@ -43,5 +43,23 @@ public class Main {
 
         Payment mobilepayment = new MobilePayment();
         mobilepayment.pay(500);
+
+        StudentM [] studentM = new StudentM[]{
+           new  StudentM("kagiso", 92.3, 28),
+                new  StudentM("Jabu", 56, 32),
+                new  StudentM("Neo", 30, 27),
+                new  StudentM("Thabiso", 48, 30)
+
+        };
+
+
+        for (int i = 0; i < studentM.length; i++){
+            studentM[i].displayStudent();
         }
+
+
+
+
+
+    }
     }
