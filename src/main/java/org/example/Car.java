@@ -6,7 +6,7 @@ public class Car {
     int year;
 
 
-
+   //Lab 2
     public Car(String brand, String colour, int year) {
         this.brand = brand;
         this.colour = colour;
