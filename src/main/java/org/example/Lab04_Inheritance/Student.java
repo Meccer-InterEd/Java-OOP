@@ -1,7 +1,7 @@
 package org.example.Lab04_Inheritance;
 
 public class Student extends Person {
-    String studentNumber;
+    public String studentNumber;
 
     public Student(String name,String studentNumber) {
         super(name);

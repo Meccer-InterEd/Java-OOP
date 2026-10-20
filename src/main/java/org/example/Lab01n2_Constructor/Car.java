@@ -5,6 +5,7 @@ public class Car {
     String colour;
     int year;
 
+
     // constructor
     public Car(String brand, String colour, int year) {
         this.brand = brand;
