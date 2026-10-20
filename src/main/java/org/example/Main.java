@@ -98,6 +98,68 @@ public class Main {
         System.out.println("\nLab 05 Task: Explain why " +
                 "one method call can produce different results.\n" +
                 "- Each class of the objects which call the method has its own unique implementation" +
-                " of the method logic.");
+                " of the method logic.\n\n");
+
+
+        //Lab 06
+        Payment payment1 = new CardPayment();
+        Payment payment2 = new CashPayment();
+        Payment mobilePayment = new MobilePayment();
+
+        payment1.pay(250);
+        payment2.pay(100);
+        mobilePayment.pay(3460);
+
+        System.out.println("\nLab 06 Question 01: What does `abstract` mean?\n" +
+                "- When applied to a class, it means that an object of that class type cannot be instantiated.\n" +
+                "- When applied to a method, it means that all the child classes must have their own code" +
+                " implementation of that particular method.\n");
+        System.out.println("Lab 06 Question 02: Can you create an object " +
+                "directly from an abstract class?\n" +
+                "- No.\n");
+        System.out.println("Lab 06 Question 03: Why must subclasses implement " +
+                "`pay()\n" +
+                "- The method pay() is marked as abstract in the parent class.\n\n");
+
+        //Lab 07
+        Lab06Student[] students = {
+            new Lab06Student("Lindiwe",19,76),
+            new Lab06Student("Kabelo",21,48),
+            new Lab06Student("Ayesha",20,89),
+            new Lab06Student("Thabo",18,63)
+        };
+
+        double classAverage = 0.0;
+        double aggregateSum = 0.0;
+        int numberOfStudents = students.length;
+        int numberOfPassedStudents = 0;
+        double highestMark = 0.0;
+        int numberOfDistinctions = 0;
+
+        for(Lab06Student lab06Student : students){
+            aggregateSum += lab06Student.getMark();
+
+            lab06Student.displayDetails();
+            if (lab06Student.hasPassed()){
+                System.out.println(lab06Student.getName()+" passed.\n");
+                numberOfPassedStudents += 1;
+
+                if (lab06Student.getMark() >= 80){
+                    numberOfDistinctions += 1;
+                }
+            } else {
+                System.out.println(lab06Student.getName()+" failed.\n");
+            }
+
+            if (lab06Student.getMark() > highestMark){
+                highestMark = lab06Student.getMark();
+            }
+        }
+
+        classAverage += (aggregateSum / numberOfStudents);
+        System.out.println("The class average is "+classAverage);
+        System.out.println("\nA total of "+numberOfPassedStudents+" students passed.\n");
+        System.out.println("The highest mark in class is "+highestMark);
+        System.out.println("\nA total of "+numberOfDistinctions+" student(s) got a distinction.\n\n");
     }
 }
