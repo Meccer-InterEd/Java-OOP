@@ -35,13 +35,21 @@ public class Main {
 //        student.introduce();
 //        teacher.introduce();
 
-        Animal animal1 = new Dog();
-        Animal animal2 = new Cat();
-        Animal animal3 = new Cow();
+//        Animal animal1 = new Dog();
+//        Animal animal2 = new Cat();
+//        Animal animal3 = new Cow();
+//
+//        animal1.makeSound();
+//        animal2.makeSound();
+//        animal3.makeSound();
 
-        animal1.makeSound();
-        animal2.makeSound();
-        animal3.makeSound();
+        Payment payment1 = new CardPayment();
+        Payment payment2 = new CashPayment();
+        Payment payment3 = new MobilePayment();
+
+        payment1.pay(250);
+        payment2.pay(100);
+        payment3.pay(500);
 
 
 

@@ -23,3 +23,9 @@ LAB 5.
 
 2. @Override is an annotation in Java that tells the compiler that a method is intended to replace or redefine a method inherited from a parent class.
 3. This happens because of polymorphism, this means many forms. The same method call can produce different results depending on the actual object being used.
+
+LAB 6.
+
+1. Abstract means incomplete by design,  It describes something that provides a general idea or structure but leaves certain details for subclasses to complete.
+2. No, not if it has unimplemented abstract methods.
+3. Because the abstract class establishes a contract, every concrete payment method must provide its own version of pay().
