@@ -1,4 +1,8 @@
 package org.example;
+
+import javax.print.DocFlavor;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -63,6 +67,49 @@ public class Main {
         payment1.pay(250);
         payment2.pay(100);
 
+        // LAB 7
+        Students[] students = new Students[4];
+        students[0] = new Students("Hishaam", 21, 96);
+        students[1] = new Students("Jeniffer", 30, 24);
+        students[2] = new Students("John", 24, 70);
+        students[3] = new Students("Jane", 26, 150);
 
+        double average = 0;
+        double sum = 0;
+        double highestMark = students[0].getMark();
+        int count = 0;
+        int distinction = 0;
+
+        for(int i = 0; i < students.length ; i++){
+            students[i].displayDetails();
+            students[i].passOrFail();
+            students[i].rejectOrDistinction();
+
+            sum = sum + students[i].getMark();
+            average = sum / students.length;
+
+            if (students[i].getMark() > highestMark && students[i].getMark() <= 100) {
+                highestMark = students[i].getMark();
+            }
+
+            if (students[i].hasPassed()){
+                count ++;
+            }
+             if(students[i].getMark() >= 80 && students[i].getMark() <=100){
+                 distinction++;
+             }
+        }
+        System.out.println("Average mark is: "  + average);
+        System.out.println("The highest mark is: " + highestMark);
+        System.out.println("This many students passed: " + count);
+        System.out.println("This many students go a distinction: " + distinction);
+
+        boolean found = false;
+        for (int i = 0; i < students.length; i++){
+            if(students[i].getName().equals("Jane")){
+                found = true;
+            }
+        }
+        System.out.println("The name was found: "+ found);
     }
 }
