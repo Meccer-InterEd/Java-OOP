@@ -200,7 +200,7 @@ directly from an abstract class? 3. Why must subclasses implement
 
 **Challenge:** Add a `MobilePayment` class.
 
-## Lab 7: Combined Project --- Student Management System
+## Lab7: Combined Project --- Student Management System
 
 Create a `Student` class with: - `private String name` -
 `private int age` - `private double mark` - A constructor - Getter
@@ -214,12 +214,12 @@ passed. 5. Find the highest mark.
 
 Suggested data:
 
-  Name        Age   Mark
+Name        Age   Mark
   --------- ----- ------
-  Lindiwe      19     76
-  Kabelo       21     48
-  Ayesha       20     89
-  Thabo        18     63
+Lindiwe      19     76
+Kabelo       21     48
+Ayesha       20     89
+Thabo        18     63 
 
 **Extension tasks** - Reject marks below 0 or above 100. - Display
 Distinction for marks of 80 or higher. - Search for a student by name. -
