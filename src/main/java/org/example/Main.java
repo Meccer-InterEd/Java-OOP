@@ -3,13 +3,10 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
+        Payment payment1 = new CardPayment();
+        Payment payment2 = new CashPayment();
 
-        Animal animal1 = new Dog();
-        Animal animal2 = new Cat();
-        Animal animal3 = new Cow();
-
-        animal1.makeSound();
-        animal2.makeSound();
-        animal3.makeSound();
+        payment1.pay(250);
+        payment2.pay(100);
     }
 }

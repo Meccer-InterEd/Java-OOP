@@ -21,5 +21,12 @@ Lab 4
 
 Lab 5
 
--
--
+- it is an annotation that tells us the method overrides the one in the parent class
+- The method call may be implemented with different classes.
+
+Lab 6
+
+- abstract - makes the class a template for other classes
+- No
+- pay has no body in the Payment abstract class
+
