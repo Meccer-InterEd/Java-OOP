@@ -35,3 +35,12 @@ It replaces the method inherited from the parent class with a customised version
 
 3. Explain why one method call can produce different results.
 Polymorphism means that the same method call can behave differently depending on the actual object being used.
+
+Lab 6
+1. What does abstract mean?
+Abstract means incomplete, abstract class dont have a body
+
+2. Can you create an object directly from an abstract class?
+No
+3. Why must subclasses implement pay()?
+Because the abstract class declares the method but doesnt say how it should work
