@@ -1,5 +1,18 @@
 package org.example;
 
+import org.example.Lab01n2_Constructor.Car;
+import org.example.Lab03_Encapsulation.BankAccount;
+import org.example.Lab04_Inheritance.Student;
+import org.example.Lab04_Inheritance.Teacher;
+import org.example.Lab05_Polymorphism.Animal;
+import org.example.Lab05_Polymorphism.Cat;
+import org.example.Lab05_Polymorphism.Cow;
+import org.example.Lab05_Polymorphism.Dog;
+import org.example.Lab06_Abstraction.CardPayment;
+import org.example.Lab06_Abstraction.CashPayment;
+import org.example.Lab06_Abstraction.Payment;
+import org.example.Lab07_Combined_Project.Students;
+
 /*1. What is a class?
 A class is a blueprint or template used to create objects.
 It defines the properties and behaviours that its objects can have.
@@ -55,6 +68,7 @@ public class Main {
         payment1.pay(250);
         payment2.pay(100);
         System.out.println("============LAB 5 ====================");
+
         // create 4 students
         Students s1 = new Students("Lindiwe", 19, 90);
         Students s2 = new Students("Kabelo", 21, 48);

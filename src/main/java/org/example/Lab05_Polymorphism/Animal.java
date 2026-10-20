@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Lab05_Polymorphism;
 
 public class Animal {
         public void makeSound() {

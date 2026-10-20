@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Lab07_Combined_Project;
 
 public class Students {
     private String name;

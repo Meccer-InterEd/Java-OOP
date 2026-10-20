@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Lab04_Inheritance;
 
 public class Person {
 

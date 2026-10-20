@@ -1,6 +1,6 @@
-package org.example;
+package org.example.Lab04_Inheritance;
 
-public class Student extends Person{
+public class Student extends Person {
     String studentNumber;
 
     public Student(String name,String studentNumber) {

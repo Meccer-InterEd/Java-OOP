@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Lab03_Encapsulation;
 
 public class BankAccount {
 

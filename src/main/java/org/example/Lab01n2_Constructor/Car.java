@@ -1,5 +1,5 @@
-package org.example;
-
+package org.example.Lab01n2_Constructor;
+// lab 1
 public class Car {
     String brand;
     String colour;
@@ -24,11 +24,11 @@ public class Car {
         return year;
     }
 
-    void displayDetails() {
+    public void displayDetails() {
         System.out.println(brand + " " + colour + " " + year);
     }
 
-    void startEngine() {
+    public void startEngine() {
         System.out.println(brand + " engine started!");
     }
 }
