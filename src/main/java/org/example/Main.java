@@ -59,6 +59,20 @@ public class Main {
          */
         System.out.println("=======================================================");
 
+        Payment p1 = new CardPayment();
+        p1.pay(250);
+        Payment p2 = new CashPayment();
+        p2.pay(100);
+        Payment p3 = new MobilePayment();
+        p3.pay(50);
+
+        /*
+            question1 - Abstract means it is declared but not fully defined, take it as a placeholder
+            question2 - No you cannot instantiate an abstract class directly
+            question3 - Because pay() method is declared abstract in the parent Payment class
+         */
+
+        System.out.println("=======================================================");
         }
 
 
