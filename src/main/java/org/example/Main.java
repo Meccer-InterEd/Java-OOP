@@ -73,7 +73,59 @@ public class Main {
          */
 
         System.out.println("=======================================================");
-        }
 
+
+        Student2 st1 = new Student2("Lindiwe",19,76);
+        Student2 st2 = new Student2("Kabelo",21,48);
+        Student2 st3 = new Student2("Ayesha",20,89);
+        Student2 st4 = new Student2("Thabo",18,63);
+        double sum = 0.0;
+        double avg =0.0;
+        int count=0;
+        int distinct =0;
+        double high=0.0;
+        String studName = "kabelo";
+        boolean found = false;
+        Student2[] student2s = {st1,st2,st3,st4};
+        for(Student2 dd: student2s){
+            dd.displayDetails();
+            if(dd.getMark() > high){
+                high = dd.getMark();
+            }
+
+            if(dd.hasPassed()==true){
+                System.out.println(dd.getName()+" You Passed");
+                count++;
+            }
+            else{
+                System.out.println(dd.getName()+" Has Failed");
+            }
+
+            if(dd.getMark() >=80){
+                System.out.println(dd.getName()+ " has received a distinction");
+                distinct ++;
+            }
+            if(dd.getName().equalsIgnoreCase(studName)){
+                found = true;
+            }
+
+
+
+            sum += dd.getMark();
+
+        }
+        avg = sum / student2s.length;
+        System.out.println(" Summed up marks are: " + sum + " and the average of these marks is:" + avg );
+        System.out.println("Number of students that have passed are: " + count);
+        System.out.println("Number of students that have received a distinction are: " + distinct);
+        System.out.println("Highest mark is: " + high);
+        if(found){
+            System.out.println(studName+ " Student has been found");
+        }
+        else{
+            System.out.println(studName+ " Student has not been found");
+        }
+        System.out.println("=======================================================");
+        }
 
     }
