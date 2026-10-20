@@ -47,9 +47,16 @@ public class Main {
 
         Animal animal1 = new Dog();
         Animal animal2 = new Cat();
+        Animal animal3 = new Cow();
 
         animal1.makeSound();
         animal2.makeSound();
+        animal3.makeSound();
+        /* One method can produce different results because of
+        @override. This allows the child class to provide its own
+        implementation of the method in the parent class, therefore
+        the method then prduces different outcomes.
+         */
 
 
     }
