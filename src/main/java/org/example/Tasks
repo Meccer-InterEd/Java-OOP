@@ -30,3 +30,10 @@ Lab 6
 - No
 - pay has no body in the Payment abstract class
 
+Lab 8
+
+- Because the name in the parameters is assigned to itself.
+- this.name = name. this tells Java that i want the name attribute of this class to be assigned to the name the object is created with.
+- Dog should call the contructor of the parent class using the word super
+- @Override
+

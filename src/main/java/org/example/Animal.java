@@ -1,32 +1,26 @@
 package org.example;
 
-public class Animal {
+public abstract class Animal {
 
-    public void makeSound(){
-        System.out.println("The animal makes a sound.");
+    private String name;
+
+    public Animal(String name){
+        this.name = name;
+    }
+
+    public void speak(){
+
+        System.out.println(name + "makes a sound.");
     }
 }
 
 class Dog extends Animal{
+    public Dog(String name) {
+        super(name);
+    }
 
-    @Override
-    public void makeSound(){
-        System.out.println("The dog barks.");
+    public void speak(){
+        System.out.println("Dog barks.");
     }
 }
 
-class Cat extends Animal{
-
-    @Override
-    public void makeSound(){
-        System.out.println("The cat meows");
-    }
-}
-
-class Cow extends Animal{
-
-    @Override
-    public void makeSound(){
-        System.out.println("Moooooo");
-    }
-}
