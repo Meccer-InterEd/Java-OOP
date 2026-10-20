@@ -59,6 +59,45 @@ public class Main {
         payment.pay(3000);
         payment1.pay(5000);
         payment2.pay(1500);
+        System.out.println();
+
+        Student_ student1 = new Student_("Uncle Waffles",26,80);
+        Student_ student2 = new Student_("Tyla",24,88);
+        Student_ student3 = new Student_("Zee Nxumalo",25,98);
+        Student_ student4 = new Student_("Jelly Babie",24,40);
+
+        Student_[] students = {student1,student2,student3,student4};
+
+        double average ;
+        double sum = 0;
+        double highMark = 0;
+        String highStudent = "";
+
+        for(int i = 0; i < students.length; i++){
+            students[i].displayDetails();
+
+            if (students[i].hasPassed() ){
+                System.out.println("Student has passed.");
+            }
+            else{
+                System.out.println("Student has failed.");
+            }
+            sum += students[i].getMark();
+
+            if(highMark <= students[i].getMark())
+            {
+                highMark = students[i].getMark();
+                highStudent = students[i].getName();
+            }
+
+
+        }
+
+        average = sum / students.length;
+
+        System.out.println("The average between the students is: "+ average);
+        System.out.println("The student with the highest mark is: "+ highStudent +" with "+ highMark);
+
 
     }
 }
