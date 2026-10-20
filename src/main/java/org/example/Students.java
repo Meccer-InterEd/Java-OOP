@@ -1,5 +1,5 @@
 package org.example;
-
+//Lab7
 public class Students {
     private String name;
     private int age;
