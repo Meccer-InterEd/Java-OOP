@@ -85,15 +85,21 @@ public class Main {
             System.out.println("There are " + passCount + " students that have passed");
         System.out.println("There are/is " + pdCount + " student/s that have passed with a distinction");
 
-        String searcher = "ayesha";
 
+        double average = 0;
+
+        for (int i = 0; i < studentM.length; i++) {
+            average += studentM[i].getMark();
+        }
+        average = average / studentM.length;
+        System.out.println(" The average is: " +average);
+
+        String searcher = "ayesha";
         for (int i = 0; i < studentM.length; i++) {
             if (studentM[i].getName().equalsIgnoreCase(searcher)){
                 System.out.println("Student found at index " + i );
             }
         }
-
-
 
     }
     }
