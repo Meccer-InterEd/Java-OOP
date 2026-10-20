@@ -71,8 +71,24 @@ public class StudentClass {
             if(students[i].mark >= 50){
                 count++;
             }
+            totalMarks = totalMarks + students[i].mark;
         }
+        average = totalMarks / students.length;
+
+        System.out.println("The number of student who passed is " + count);
+        System.out.println("The average is " + average);
     }
+    void Highest(StudentClass[] students){
 
+        double highest = students[0].mark;
 
+        for(int i = 0 ; i<students.length; i++){
+
+            if(students[i].mark > highest){
+
+                highest = students[i].mark;
+            }
+        }
+        System.out.println("The highest mark is " + highest);
+    }
 }

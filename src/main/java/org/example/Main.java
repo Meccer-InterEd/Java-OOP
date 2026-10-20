@@ -14,7 +14,7 @@ public class Main {
 
         student.displayDetails(students);
         boolean passorfail = false;
-        double average = 0;
+
         StudentClass highest = students[0];
 
         for(int i = 0; i<students.length; i++){
@@ -22,8 +22,8 @@ public class Main {
             passorfail = students[i].hasPassed(students[i].getMark());
         }
 
-
-
+        student.countPassedAndAvg(students);
+        student.Highest(students);
 
     }
 }
