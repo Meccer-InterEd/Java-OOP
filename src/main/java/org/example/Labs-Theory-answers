@@ -46,3 +46,17 @@ Questions Lab 5
 2. Explain why one method call can produce different results.
 - produces different results due to the input parameters provided.
 ---------------------------------------------------------------------------------------
+Questions LAB 8.
+
+1. Why does name = name; not set the object's field?
+- Because the constructor's parameter has the same name as the instance variable.
+
+2. How can this fix the problem?
+- By adding the "this" keyword.
+
+3. What should the Dog constructor do to initialize the parent?
+- Must create a constructor and use the super keyword on variable name from animal.
+
+4. Which annotation should be used for the overridden method?
+- @Override.
+---------------------------------------------------------------------------------------
