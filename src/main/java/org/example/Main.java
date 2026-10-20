@@ -122,11 +122,11 @@ public class Main {
                 "- The method pay() is marked as abstract in the parent class.\n\n");
 
         //Lab 07
-        Lab06Student[] students = {
-            new Lab06Student("Lindiwe",19,76),
-            new Lab06Student("Kabelo",21,48),
-            new Lab06Student("Ayesha",20,89),
-            new Lab06Student("Thabo",18,63)
+        Lab07Student[] students = {
+            new Lab07Student("Lindiwe",19,76),
+            new Lab07Student("Kabelo",21,48),
+            new Lab07Student("Ayesha",20,89),
+            new Lab07Student("Thabo",18,63)
         };
 
         double classAverage = 0.0;
@@ -136,7 +136,7 @@ public class Main {
         double highestMark = 0.0;
         int numberOfDistinctions = 0;
 
-        for(Lab06Student lab06Student : students){
+        for(Lab07Student lab06Student : students){
             aggregateSum += lab06Student.getMark();
 
             lab06Student.displayDetails();
@@ -161,5 +161,22 @@ public class Main {
         System.out.println("\nA total of "+numberOfPassedStudents+" students passed.\n");
         System.out.println("The highest mark in class is "+highestMark);
         System.out.println("\nA total of "+numberOfDistinctions+" student(s) got a distinction.\n\n");
+
+
+        //Lab 08
+        System.out.println("Lab 08 Question 01: Why does `name = name;` not set the object's field?\n" +
+                "- both the object field and constructor parameter have the same title,\n  thus it is not" +
+                " known that the value of the parameter is being assigned to the object field, as " +
+                "the 2 are indistinguishable.");
+        System.out.println("\nLab 08 Question 02: How can `this` fix the problem?\n" +
+                "- It distinguishes the object field from the constructor parameter of the same name.\n" +
+                "  Making it clear that the value of the constructor parameter is being assigned to the" +
+                " object field.");
+        System.out.println("\nLab 08 Question 03: What should the `Dog` constructor do " +
+                "to initialize the parent?\n" +
+                "- Call the super() method in the first line of the constructor");
+        System.out.println("\nLab 08 Question 04: Which annotation should be used for the " +
+                "overridden method?\n" +
+                "- @Override\n\n");
     }
 }

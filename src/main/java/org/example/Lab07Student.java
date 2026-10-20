@@ -5,12 +5,12 @@ Create a `Student` class with: - `private String name` -
 methods - `hasPassed()`, returning `true` when mark is at least 50 -
 `displayDetails()`, printing details and pass/fail result
  */
-public class Lab06Student {
+public class Lab07Student {
     private String name;
     private int age;
     private double mark;
 
-    public Lab06Student(String name, int age, double mark){
+    public Lab07Student(String name, int age, double mark){
         this.name = name;
         this.age = age;
         if (mark < 0 || mark > 100){
