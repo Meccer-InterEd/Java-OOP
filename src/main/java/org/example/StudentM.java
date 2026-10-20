@@ -5,33 +5,46 @@ public class StudentM {
     private int age;
     private double mark;
 
-public String getName(String name){
-    this.name = name;
+public String getName(){
     return name;
+
 }
-    public double getMark(double mark){
-        this.mark = mark;
+    void setName(String name) {
+        this.name = name;
+    }
+    public double getMark(){
         return mark;
     }
-    public int getAge(int age){
-        this.age = age;
-        return age;
-    }
-    StudentM(String name, double mark, int age){
-    getAge(age);
-    getMark(mark);
-    getName(name);
-
-    }
-    public boolean hasPassed(){
-    if(mark >= 50){
-       return true;
-    } else {
-        return false;
-    }
+    void setMark(double mark) {
+        this.mark = mark;
     }
 
-    void displayStudent(){
-    System.out.println("Student Name: " + name + " Student age: " + age + " Student mark " + mark + " Passed " + hasPassed());
+        public int getAge (){
+
+            return age;
+        }
+        void setAge(int age){
+            this.age = age;
+        }
+        StudentM(String name, double mark, int age){
+            setAge(age);
+            setMark(mark);
+            setName(name);
+
+        }
+        public boolean hasPassed () {
+                if (mark < 0 || mark > 100) {
+                    System.out.println("Invalid mark");
+                    return false;
+                }
+                if (mark >= 50) {
+                    return true;
+                } else {
+                    return false;
+                }
+
+        }
+        void displayStudent () {
+            System.out.println("Student Name: " + name + " Student age: " + age + " Student mark " + mark + " Passed " + hasPassed());
+        }
     }
-}

@@ -1,6 +1,9 @@
 package org.example;
 
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Main {
     public static void main(String[] args) {
         Car car= new Car();
@@ -45,10 +48,10 @@ public class Main {
         mobilepayment.pay(500);
 
         StudentM [] studentM = new StudentM[]{
-           new  StudentM("kagiso", 92.3, 28),
-                new  StudentM("Jabu", 56, 32),
-                new  StudentM("Neo", 30, 27),
-                new  StudentM("Thabiso", 48, 30)
+           new  StudentM("Lindiwe", 76, 19),
+                new  StudentM("Kabelo", 48, 21),
+                new  StudentM("Ayesha", 89, 20),
+                new  StudentM("Thabo", 63, 18)
 
         };
 
@@ -57,7 +60,38 @@ public class Main {
             studentM[i].displayStudent();
         }
 
+        double highest = studentM[0].getMark();
 
+        for (int i = 0; i < studentM.length; i++) {
+            if (studentM[i].getMark() > highest) {
+                highest = studentM[i].getMark();
+            }
+        }
+
+        System.out.println("Highest mark: " + highest);
+
+        int passCount = 0;
+        int pdCount = 0;
+        for (int i = 0; i < studentM.length; i++) {
+            if (studentM[i].getMark() >= 50){
+                passCount++;
+            }
+        }
+        for (int i = 0; i < studentM.length; i++) {
+            if (studentM[i].getMark() >= 80) {
+                pdCount++;
+            }
+        }
+            System.out.println("There are " + passCount + " students that have passed");
+        System.out.println("There are/is " + pdCount + " student/s that have passed with a distinction");
+
+        String searcher = "ayesha";
+
+        for (int i = 0; i < studentM.length; i++) {
+            if (studentM[i].getName().equalsIgnoreCase(searcher)){
+                System.out.println("Student found at index " + i );
+            }
+        }
 
 
 
