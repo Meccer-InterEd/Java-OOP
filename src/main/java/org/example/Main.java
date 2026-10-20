@@ -171,5 +171,66 @@ public class Main {
 
         student1.searchByName("Makwa", students);
 
+        /*
+        class Animal {
+            private String name;
+
+            public Animal(String name) {
+                name = name;
+            }
+
+            public void speak() {
+                System.out.println(name + " makes a sound.");
+            }
+        }
+
+        class Dog extends Animal {
+            public Dog(String name) {
+                name = name;
+            }
+
+            public void speak() {
+                System.out.println("Dog barks.");
+            }
+        }
+
+        Corrections to above code:
+
+        class Animal {
+            private String name;
+
+            public Animal(String name) {
+                this.name = name;
+            }
+
+            public void speak() {
+                System.out.println(name + " makes a sound.");
+            }
+        }
+
+        class Dog extends Animal {
+            public Dog(String name) {
+                super(name);
+            }
+
+            @Override
+            public void speak() {
+                System.out.println("Dog barks.");
+            }
+        }
+
+        Changed name=name to this.name = name. This works because it assigns the constructors argument
+        called name to the classes attribute called name instead of assigning the constructors argument
+        to the constructors argument
+
+        Changed the dogs constructor to use super(name) instead of name = name. This calls the constructor
+        in the Animal class and passes the dogs name to it. The dogs name will be set through the Animal
+        constructor
+
+        I used @Override on the speak method in the dog class. This allows method in the dog class to
+        implement its own and more specific version of the inherited method from the Animal class
+
+         */
+
     }
 }
