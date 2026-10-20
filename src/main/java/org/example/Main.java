@@ -62,7 +62,7 @@ public class Main {
         System.out.println();
 
         Student_ student1 = new Student_("Uncle Waffles",26,80);
-        Student_ student2 = new Student_("Tyla",24,88);
+        Student_ student2 = new Student_("Tyla",24,70);
         Student_ student3 = new Student_("Zee Nxumalo",25,98);
         Student_ student4 = new Student_("Jelly Babie",24,40);
 
@@ -76,12 +76,21 @@ public class Main {
         for(int i = 0; i < students.length; i++){
             students[i].displayDetails();
 
-            if (students[i].hasPassed() ){
+            if(students[i].getMark() < 0 && students[i].getMark() > 100)
+            {
+                System.out.println("You have entered an invalid mark.");
+            }
+
+            if (students[i].hasPassed() && students[i].getMark() >= 80 ){
+                System.out.println("Student has passed and obtained distinction.");
+            }
+            else if(students[i].hasPassed()){
                 System.out.println("Student has passed.");
             }
-            else{
+            else {
                 System.out.println("Student has failed.");
             }
+
             sum += students[i].getMark();
 
             if(highMark <= students[i].getMark())
