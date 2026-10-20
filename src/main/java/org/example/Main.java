@@ -86,5 +86,26 @@ public class Main {
            super(name) passes the name argument from the child class's constructor to the matching constructor in the
            parent class, which will allow the parent constructor to initialise the inherited fields
          */
+
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        Cow cow = new Cow();
+
+        dog.makeSound();
+        cat.makeSound();
+        cow.makeSound();
+
+        /*
+        Lab 5 Questions:
+
+        1. Explain @Override
+           The @Override allows a method in a subclass to provide a specific implementation
+           of a method that is already defined in its parent class. This is called method overriding
+
+        2. Explain why one method call can produce different results
+           This is because of polymorphism. One method can produce different results through method
+           overriding which will allow that method to behave differently according to the specific
+           behaviour given to it within the specific class in which it lives
+         */
     }
 }

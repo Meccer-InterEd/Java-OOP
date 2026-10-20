@@ -7,5 +7,4 @@ public class Teacher extends Person{
         super(name);
         this.subject = subject;
     }
-
 }
