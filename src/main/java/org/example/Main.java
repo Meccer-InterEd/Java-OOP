@@ -107,5 +107,31 @@ public class Main {
            overriding which will allow that method to behave differently according to the specific
            behaviour given to it within the specific class in which it lives
          */
+
+        Payment payment1 = new CardPayment();
+        Payment payment2 = new CashPayment();
+        Payment payment3 = new MobilePayment();
+
+        payment1.pay(535.77);
+        payment2.pay(150.50);
+        payment3.pay(1234);
+
+        /*
+        Lab 6 Questions:
+
+        1. What does abstract mean?
+           Abstract is a non-access modifier used on classes and methods. When used on a class it
+           restricts that class from being able to create objects. Abstract can only be used on methods
+           which reside in abstract classes and the method will not have a body. The body is provided by
+           the subclass.
+
+        2. Can you create an object directly from an abstract class?
+           No you cannot
+
+        3. Why must subclasses implement pay()
+           The subclasses must implement the pay() method because it is defined as an abstract method
+           in the parent class. Abstract methods have no body, so each subclass has to provide its own
+           implementation of the method
+         */
     }
 }
