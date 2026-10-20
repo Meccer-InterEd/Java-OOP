@@ -41,7 +41,13 @@ public class StudentClass {
 
         boolean isPassed = false;
 
-        if(mark >= 50){
+        if(mark < 0 && mark > 100){
+            System.out.println("Invalid Marks!");
+        }
+        else if(mark >= 80){
+            System.out.println(this.name +" you passed with a distinction.");
+        }
+        else if(mark >= 50){
             isPassed = true;
             System.out.println(this.name + " you have passed.");
         }else{
@@ -65,10 +71,14 @@ public class StudentClass {
         int count = 0;
         double totalMarks = 0;
         double average = 0;
+        int countDistinctions = 0;
 
         for(int i = 0 ; i<students.length; i++){
 
-            if(students[i].mark >= 50){
+            if(students[i].mark >= 80){
+                countDistinctions++;
+            }
+            else if(students[i].mark >= 50){
                 count++;
             }
             totalMarks = totalMarks + students[i].mark;
@@ -76,6 +86,7 @@ public class StudentClass {
         average = totalMarks / students.length;
 
         System.out.println("The number of student who passed is " + count);
+        System.out.println("The number of student who passed with a Distinction is " + countDistinctions);
         System.out.println("The average is " + average);
     }
     void Highest(StudentClass[] students){

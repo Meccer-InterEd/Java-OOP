@@ -7,7 +7,7 @@ public class Main {
 
         StudentClass student = new StudentClass("Thami", 27, 67);
         StudentClass student2 = new StudentClass("MO", 23, 76);
-        StudentClass student3 = new StudentClass("Makwa", 24, 78);
+        StudentClass student3 = new StudentClass("Makwa", 24, 80);
         StudentClass student4 = new StudentClass("Ethan", 25, 49);
 
         StudentClass[] students = {student, student2, student3, student4};
