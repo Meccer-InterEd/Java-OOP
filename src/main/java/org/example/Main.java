@@ -58,6 +58,11 @@ public class Main {
         the method then prduces different outcomes.
          */
 
+        Payment payment1 = new CardPayment();
+        Payment payment2 = new CashPayment();
+        payment1.pay(250);
+        payment2.pay(100);
+
 
     }
 }
