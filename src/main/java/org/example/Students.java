@@ -43,7 +43,7 @@ public class Students {
         System.out.println("Mark: " + mark);
 
     }
-
+     // calculating who passed there exam
     public void calculation() {
         if (mark >= 80) {
             System.out.println("Result: Distinction");

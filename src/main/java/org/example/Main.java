@@ -55,14 +55,14 @@ public class Main {
         payment1.pay(250);
         payment2.pay(100);
         System.out.println("============LAB 5 ====================");
-
+        // create 4 students
         Students s1 = new Students("Lindiwe", 19, 90);
         Students s2 = new Students("Kabelo", 21, 48);
         Students s3 = new Students("Ayesha", 20, 89);
         Students s4 = new Students("Thabo", 18, 63);
-
+        // array
         Students[] students = {s1, s2, s3, s4};
-
+         //for loop
         for (int i = 0; i < students.length; i++) {
             students[i].displayDetails();
             students[i].calculation();
