@@ -1,0 +1,35 @@
+The corrected code:
+class Animal {
+    private String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void speak() {
+        System.out.println(name + " makes a sound.");
+    }
+}
+
+class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+
+    @Override
+    public void speak() {
+        System.out.println("Dog barks.");
+    }
+}
+
+1. Why does name = name; not set the object's field?
+the 'name' refers to the constructor's parameter not the object's field
+
+2. How can this fix the problem?
+By adding the this keyword so you can refer to the object's field
+
+3. What should the Dog constructor do to initialize the parent?
+ have the super(name) to call the parent class constructor
+
+4. Which annotation should be used for the overridden method?
+the @Override annotation
