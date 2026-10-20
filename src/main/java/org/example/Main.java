@@ -43,5 +43,47 @@ public class Main {
         payment1.pay(250);
         payment2.pay(100);
         payment3.pay(600);
+
+        StudentLab7 student1 = new StudentLab7("Siyabonga", 26, 88.0);
+        StudentLab7 student2 = new StudentLab7("Lona", 21, 61.0);
+        StudentLab7 student3 = new StudentLab7("Ditebogo", 25, 34.0);
+        StudentLab7 student4 = new StudentLab7("Kagiso", 24, 48.0);
+
+        System.out.print("-----------Students Details");
+        StudentLab7[] students = {student1, student2, student3, student4};
+        for(StudentLab7 _students: students) {
+            _students.displayDetails();
+            if(_students.hasPassed()) {
+                System.out.println("Pass");
+            } else {
+                System.out.println("Fail");
+            }
+        }
+        System.out.println("----------------------------");
+
+        double avgMark;
+        double totalMarks = 0;
+
+        for (StudentLab7 _students: students) {
+            totalMarks += _students.getMark();
+        }
+        avgMark = totalMarks / students.length;
+        System.out.println("Average mark for students is: " + avgMark);
+
+        int numPassedStudent = 0;
+        for (StudentLab7 _students : students) {
+            if (_students.hasPassed()) {
+                numPassedStudent++;
+            }
+        }
+        System.out.println("The number of student that has passed is: " + numPassedStudent);
+
+        double highestMark = students[0].getMark();
+        for (StudentLab7 _students: students) {
+            if(_students.getMark() > highestMark) {
+                highestMark = _students.getMark();
+            }
+        }
+        System.out.println("The highest mark is: " + highestMark);
     }
 }
