@@ -1,5 +1,5 @@
 package org.example;
-
+//Lab1
 public class Car {
     String brand;
     String colour;
