@@ -112,4 +112,39 @@ public class Main {
         }
         System.out.println("The name was found: "+ found);
     }
+
+    /*
+    Lab 8
+    CORRECTED CODE:
+    class Animal {
+    private String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void speak() {
+        System.out.println(name + " " + makes a sound.");
+    }
+}
+
+class Dog extends Animal {
+    public Dog(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void speak() {
+        System.out.println("Dog barks.");
+    }
+}
+
+1. That is because name = name both variables are referring
+to the constructor parameter, no the object's field. So
+basically Java is assigning the parameter to itself.
+2. You fix this problem by adding a 'this' keyword to the first name.
+You can distinguish between the object's field and the constructor parameter.
+3.
+     */
+
 }
