@@ -19,4 +19,23 @@ public class Students {
     public void setName(String name) {
         this.name = name;
     }
+
+    public double getMark() {
+        return mark;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setMark(double mark) {
+        this.mark = mark;
+    }
+    boolean hasPassed(int mark){
+
+    }
 }
