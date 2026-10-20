@@ -133,5 +133,43 @@ public class Main {
            in the parent class. Abstract methods have no body, so each subclass has to provide its own
            implementation of the method
          */
+
+        Student_ student1 = new Student_("Makwa", 23, 89);
+        Student_ student2 = new Student_("Lona", 21, 85);
+        Student_ student3 = new Student_("Siya", 24, 63);
+        Student_ student4 = new Student_("Rendi", 33, 49);
+
+        Student_ [] students = {student1, student2, student3, student4};
+
+        int countPassed = 0;
+        int countDistinction = 0;
+        double total = 0;
+        double highest = students[0].getMark();
+
+        for (int i = 0; i < students.length; i++) {
+            students[i].displayDetails();
+
+            total = total + students[i].getMark();
+
+            if (students[i].getMark() > highest) {
+                highest = students[i].getMark();
+            }
+
+            if (students[i].hasPassed()) {
+                countPassed++;
+            }
+
+            if (students[i].getMark() >= 80) {
+                countDistinction++;
+            }
+        }
+
+        System.out.println("Total passed: " + countPassed);
+        System.out.println("Distinctions achieved: " + countDistinction);
+        System.out.println("Highest mark: " + highest);
+        System.out.println("Average mark: " + total/students.length + "\n");
+
+        student1.searchByName("Makwa", students);
+
     }
 }
