@@ -106,6 +106,10 @@ public class Main {
 
         System.out.println("The average between the students is: "+ average);
         System.out.println("The student with the highest mark is: "+ highStudent +" with "+ highMark);
+        System.out.println();
+
+        Animal_ animal5 = new Dog1("Billy Blanco");
+        animal5.speak();
 
 
     }

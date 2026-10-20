@@ -53,3 +53,64 @@ A Java class is a blueprint or template that defines the fields (data) and metho
 
   3. Why must subclasses implement pay()?
   - Because the parent class holds the main class
+
+  Lab 8 Questions
+
+  Questions
+  1. Why does name = name; not set the object's field?
+   - Because it doesn't call the initialised variable in the class to work with the one inside the constructor.
+
+  2. How can this fix the problem?
+    - by adding "this." in front of the first name variable (this.name = name;)
+    - You could also add the super() method;
+
+  3. What should the Dog constructor do to initialize the parent?
+    - I think the dog constructor should override
+
+  4. Which annotation should be used for the overridden method?
+    - The @Override annotation is a predefined annotation in Java that indicates a method in a subclass is intended to override a method from its superclass or an implemented interface
+
+
+Knowledge Check
+Answer in your own words:
+
+What is the difference between a class and an object?
+-- A class describes an object with fields and gives functionality to an object.
+-- An object is an instance of the class, making the class able to implement the functionalities.
+
+What is a constructor?
+-- A constructor is a special method with the same name as the class and no return type, used to initialize a new object when the new keyword is called.
+
+What does this refer to?
+--  This calls a variable in a class into the constructor, so that it can be used a parameter in the object.
+
+What is encapsulation?
+-- Encapsulation is on of the 4 pillars of OOP, essentially restricting data within a child class so that it can be accessed by the parent class.
+--  using private fields and public getter and setter methods
+
+What does extends do?
+-- Extend allows child classes to use methods in parent classes
+
+What is method overriding?
+-- It is when a child class is intended to override a method from its parent class
+
+Explain polymorphism using the animal example.
+-- Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+-- For example, think of a superclass called Animal that has a method called animalSound().
+-- Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound
+
+What is an abstract class?
+-- An abstract class is a restricted class that cannot be used to create objects
+
+Why might a field be private?
+-- You only want it to be accessible within the declared class
+
+Give one real-world use for OOP.
+
+Reflection
+Write a short paragraph describing which OOP concept was easiest, which was most challenging, and how you could use OOP in a real application
+
+-- One of the easiest concepts to grasp was inheritance, it is straight forward and gives you an understanding on how you can use superclasses and subclasses.
+-- The most challenging one would be abstraction and polymorphism, they are complicated to use and take more time and effort into understanding them, although I'd need to spend more time and doing practicals to understand them better.
+-- I could use inheritance in a real world application such as a asset tracking system where I know certain assets have the same material or similar value. This would also be applicable with polymorphism.
+-- I could could use encapsulation by restricting certain variables such as barcodes, so that they aren't accessible or changeable such as tracking number. Same with abstraction
