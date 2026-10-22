@@ -1,6 +1,5 @@
 package org.example;
 
-import javax.print.DocFlavor;
 import java.util.Arrays;
 
 public class Main {
@@ -111,6 +110,24 @@ public class Main {
             }
         }
         System.out.println("The name was found: "+ found);
+
+
+        System.out.println("Part 1: ");
+        ResultStatus results = ResultStatus.FAIL;
+        results.scoreStatus(0);
+        results.scoreStatus(49);
+        results.scoreStatus(50);
+        results.scoreStatus(74);
+        results.scoreStatus(75);
+        results.scoreStatus(100);
+        /* If the score was -1 or 101 it would display 'Invalid' since
+        I added validation to the method, that marks less than 0 and marks greater
+        than zero will be given a sore status/result. They are out of bounds.
+
+        String values can be changed, and when using an enum, the whole purpose
+        is to declare constant values, preventing the chance os them every being changed.
+         */
+
     }
 
     /*
@@ -146,5 +163,8 @@ basically Java is assigning the parameter to itself.
 You can distinguish between the object's field and the constructor parameter.
 3.
      */
+
+
+
 
 }
