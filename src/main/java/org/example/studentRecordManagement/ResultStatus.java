@@ -1,4 +1,4 @@
-package org.example.part1;
+package org.example.studentRecordManagement;
 
 public class ResultStatus {
 
