@@ -86,5 +86,33 @@ public class Main {
         System.out.println(student_record.full_name());
         System.out.println(student_record.student_id());
         System.out.println(student_record.score());
+
+//        Part 4
+        StudentRecord[] students_ = {
+                new StudentRecord(101, "Amina Dlamini", 82),
+                new StudentRecord(102, "David Mokoena", 67),
+                new StudentRecord(103, "Lerato Nkosi", 43),
+                new StudentRecord(104, "Thabo Molefe", 91),
+                new StudentRecord(105, "Naledi Khumalo", 50),
+                new StudentRecord(106, "Sipho Ndlovu", 35),
+                new StudentRecord(107, "Zanele Mthembu", 74),
+                new StudentRecord(108, "Kabelo Sithole", 75)
+        };
+
+        System.out.println("Number of students: " + students_.length);
+
+        System.out.println("\nFirst student (index 0): " + students_[0].full_name());
+
+        System.out.println("Last student (index " + (students_.length - 1) + "): " + students_[students_.length - 1].full_name());
+
+        for (int i = 0; i < students_.length; i++) {
+            System.out.println("Index: " + i + ", Name: " + students_[i].full_name() + ", Score: " + students_[i].score());
+        }
+
+        ConsoleResultReporter reporter = new ConsoleResultReporter();
+
+        for (StudentRecord student_ : students_) {
+            reporter.printStudentResult(student_);
+        }
     }
 }
