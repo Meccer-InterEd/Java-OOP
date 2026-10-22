@@ -106,6 +106,29 @@ public class Main {
             System.out.println("----------------------------");
         }
 
+        System.out.println("=========================================");
+
+        ResultReporter report = new ConsoleResultReporter();
+
+        StudentRecord stud1 = new StudentRecord(11,"Mancoba",71);
+        StudentRecord stud2 = new StudentRecord(12,"Mana",60);
+        StudentRecord stud3 = new StudentRecord(13,"Macoa",55);
+        StudentRecord stud4 = new StudentRecord(14,"Manc",80);
+        StudentRecord stud5 = new StudentRecord(15,"Moba",99);
+
+        report.printStudentResult(stud1);
+        report.printStudentResult(stud2);
+        report.printStudentResult(stud3);
+        report.printStudentResult(stud4);
+        report.printStudentResult(stud5);
+
+        System.out.println("=========================================");
+
+
+
+
+
+
 
 
 
