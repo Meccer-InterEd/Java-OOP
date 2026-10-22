@@ -37,3 +37,5 @@ Lab 8
 - Dog should call the contructor of the parent class using the word super
 - @Override
 
+Part 2
+ 3. The difference i see is that methods in a record are automatically created.
