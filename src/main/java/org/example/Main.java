@@ -166,6 +166,30 @@ public class Main {
         m1.printStudentResult(s4);
         m1.printStudentResult(s5);
 
+        System.out.println("=======================================================");
+
+        StudentRecord[] stdnt = {
+                new StudentRecord(1,"Motsei",50),
+                new StudentRecord(2,"Lona",70),
+                new StudentRecord(3,"Didi",65),
+                new StudentRecord(4,"qiniso",90),
+                new StudentRecord(5,"Tshepo",88),
+                new StudentRecord(6, "Andile",45),
+                new StudentRecord(7,"Peter",70),
+                new StudentRecord(8,"Kagiso",30)
+
+        };
+
+        System.out.println("The number of students are:" + stdnt.length);
+        for(int i=0; i< stdnt.length; i++){
+            System.out.println("Name: " + stdnt[i].fullName() + " Score:" + stdnt[i].score());
+        }
+
+        for(StudentRecord e: stdnt){
+            ConsoleResultReporter rr = new ConsoleResultReporter();
+            rr.printStudentResult(e);
+        }
+
 
 
     }
