@@ -158,6 +158,14 @@ public class Main {
 
         System.out.println("=======================================================");
 
+        ConsoleResultReporter m1 = new ConsoleResultReporter();
+
+        m1.printStudentResult(s1);
+        m1.printStudentResult(s2);
+        m1.printStudentResult(s3);
+        m1.printStudentResult(s4);
+        m1.printStudentResult(s5);
+
 
 
     }
