@@ -1,0 +1,4 @@
+Part 2: Explain one difference between a record and a traditional class with fields and getter methods.
+- A record automatically generates fields and accessor methods matching the field name directly,
+  whereas a traditional class requires one to manually declare fields,
+  write constructor logic, and define getter methods.
