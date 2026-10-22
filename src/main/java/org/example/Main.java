@@ -271,7 +271,9 @@ public class Main {
 
            One difference is that Records automatically provide getter methods and a constructor while
            with a traditional class you would have to write it yourself
-           
+
          */
+
+
     }
 }
