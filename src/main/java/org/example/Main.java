@@ -126,6 +126,31 @@ public class Main {
             System.out.println(studName+ " Student has not been found");
         }
         System.out.println("=======================================================");
+
+        ResultsStatus status = ResultsStatus.FAIL;
+        int mark = 101;
+
+        if(mark >=0 && mark <=100){
+            if(mark >=75){
+                status = ResultsStatus.PASS;
+            }
+            else if (mark >=50 && mark <=74){
+                status = ResultsStatus.SUPPLEMENTARY;
+            }
+            else{
+                status = ResultsStatus.FAIL;
+            }
+            System.out.println(status);
+        }
+        else {
+            System.out.println("Inavlid Score entered");
         }
 
+
+        }
     }
+
+
+
+
+
