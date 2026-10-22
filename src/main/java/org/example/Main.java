@@ -66,8 +66,16 @@ public class Main {
             aggregateMark += _student.getMark();
         }
         classAverage += (aggregateMark / numOfStudents);
-        System.out.println("The highest mark is "+highestMark);
-        System.out.println("Class average is "+classAverage);
+        System.out.println("The highest mark is " + highestMark);
+        System.out.println("Class average is " + classAverage);
+
+        int[] testScores = {0, 45, 50, 76, 75, 99, 101, -60};
+        for (int score: testScores){
+
+            ResultsStatus status = ResultsStatus.getStatus(score);
+            System.out.println("Score:" + score + " status:" + status);
+        }
+
     }
 }
 
