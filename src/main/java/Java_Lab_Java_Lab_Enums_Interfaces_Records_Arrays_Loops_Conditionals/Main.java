@@ -23,9 +23,40 @@ public class Main {
 
         StudentRecord[] students = {studentRecord1, studentRecord2, studentRecord3, studentRecord4, studentRecord5};
         ConsoleResultReporter consoleResultReporter = new ConsoleResultReporter();
-        for (StudentRecord studentRecord: students) {
+        for (StudentRecord studentRecord : students) {
             consoleResultReporter.printStudentResult(studentRecord);
         }
         System.out.println("-----------------------------------------------------");
+
+        StudentRecord[] _students = {
+                new StudentRecord(291534, "Siyabonga Deut Ngobeni", 99),
+                new StudentRecord(345674, "Lona Hans", 0),
+                new StudentRecord(675365, "Ditebogo Tlhakola", 50),
+                new StudentRecord(789643, "Kagiso Shaun Molefe", 77),
+                new StudentRecord(326578, "Ntiyiso Chauke", 84),
+                new StudentRecord(101, "Amina Dlamini", 82),
+                new StudentRecord(102, "David Mokoena", 67),
+                new StudentRecord(103, "Lerato Nkosi", 43)
+        };
+
+        System.out.println("Total number of students: " + _students.length);
+        System.out.println("-----------------------------------------------------");
+
+        for (int i = 0; i < students.length; i++) {
+            System.out.println("Student Name: " + students[i].fullName() + ", Score: " + students[i].score());
+        }
+        System.out.println("-----------------------------------------------------");
+
+        for (StudentRecord studentRecord: _students) {
+            consoleResultReporter.printStudentResult(studentRecord);
+        }
+        System.out.println("-----------------------------------------------------");
+
+        //Demonstration.
+        System.out.println("First student (Index 0): " + _students[0].fullName());
+
+        int lastIndex = _students.length - 1;
+        System.out.println("Last student (Index " + lastIndex + "): " + _students[lastIndex].fullName());
+
     }
 }

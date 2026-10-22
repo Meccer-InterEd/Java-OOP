@@ -8,3 +8,7 @@ Part 3: In your own words, explain the role of the interface in this program.
 - Is that it forces the ConsoleResultReporter to include together determineStatus and
   printStudentResult, guaranteeing that any future class can process a StudentRecord
   the exact same way and prints cleanly.
+--------------------------------------------------------------------------------------------------------
+Part 4: Explain the difference between a traditional `for` loop and an enhanced `for` loop.
+- With enhanced for loop one can only print everything in an array from start to finis.
+- With Traditional for loop you can customize it to print to a specific index.
