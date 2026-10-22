@@ -57,6 +57,26 @@ public class Main {
 
         int lastIndex = _students.length - 1;
         System.out.println("Last student (Index " + lastIndex + "): " + _students[lastIndex].fullName());
+        System.out.println("-----------------------------------------------------");
+
+        int numPassedStudents = 0;
+        for (StudentRecord _studentRecord: _students) {
+            if (consoleResultReporter.determineStatus(_studentRecord.score()) == ResultStatus.resultStatus.PASS) {
+                numPassedStudents++;
+            }
+        }
+        System.out.println("The number of students who passed is: " + numPassedStudents);
+        System.out.println("-----------------------------------------------------");
+
+        int numSupplementaryStudents = 0;
+        for (StudentRecord _studentRecord: _students) {
+            if (consoleResultReporter.determineStatus(_studentRecord.score()) == ResultStatus.resultStatus.SUPPLEMENTARY) {
+                numSupplementaryStudents++;
+            }
+        }
+        System.out.println("The number of students who need supplementary assessment is: " + numSupplementaryStudents);
+        System.out.println("-----------------------------------------------------");
+
 
     }
 }
