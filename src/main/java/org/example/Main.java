@@ -237,7 +237,7 @@ public class Main {
         System.out.println(ResultStatus.scoreStatus(85));
 
         /*
-        Lab 1 Questions:
+        Part 1 Questions:
 
         1. Explain what should happen if the score is -1 or 101
            The program should inform the user that the mark they entered to determine a score status
@@ -249,6 +249,29 @@ public class Main {
            It is safer because it restricts a variable to a predefined list of valid constants. This
            helps us to prevent invalid values. The problem is that Strings can hold any text including
            values which are not considered valid statuses
+         */
+
+        StudentRecord studentRecord1 = new StudentRecord(1, "Hishaam", 85);
+        StudentRecord studentRecord2 = new StudentRecord(2, "Makwa", 85);
+        StudentRecord studentRecord3 = new StudentRecord(3, "Lona", 78);
+        StudentRecord studentRecord4 = new StudentRecord(4, "Ditebogo", 90);
+        StudentRecord studentRecord5 = new StudentRecord(5, "Andile", 89);
+
+        System.out.println("Student 1 name: " + studentRecord1.fullName());
+        System.out.println("Student 2 mark: " + studentRecord2.score());
+        System.out.println("Student 3 ID: " + studentRecord3.studentId());
+        System.out.println("Student 4 mark: " + studentRecord4.score());
+        System.out.println("Student 5 name: " + studentRecord5.fullName());
+
+        /*
+        Part 2 Questions:
+
+        1. Explain one difference between a record and a traditional class with fields and getter
+           methods.
+
+           One difference is that Records automatically provide getter methods and a constructor while
+           with a traditional class you would have to write it yourself
+           
          */
     }
 }
