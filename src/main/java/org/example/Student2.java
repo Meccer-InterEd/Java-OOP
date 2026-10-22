@@ -45,7 +45,9 @@ public class Student2 {
     }
 
     public void displayDetails(){
-        System.out.println("Name of the student : " + name + "\n" + "Student is: " + age + " years" + "\n" +"Student marks : " + marks);
+        System.out.println("Name of the student : " + name +
+                "\n" + "Student is: " + age + " years" +
+                "\n" +"Student marks : " + marks);
     }
     public void hasPassed(){
         if (marks >= 50) {
