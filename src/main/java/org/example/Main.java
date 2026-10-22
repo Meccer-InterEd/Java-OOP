@@ -13,6 +13,9 @@ import org.example.Lab06_Abstraction.CashPayment;
 import org.example.Lab06_Abstraction.Payment;
 import org.example.Lab07_Combined_Project.Students;
 import org.example.Lab08_Debugging.Animals;
+import org.example.Lab09_StudentResults.ConsoleResultReporter;
+import org.example.Lab09_StudentResults.ResultMethod;
+import org.example.Lab09_StudentResults.ResultStatus;
 import org.example.Lab09_StudentResults.StudentRecord;
 
 /*1. What is a class?
@@ -29,7 +32,7 @@ public class Main {
         System.out.println("============LAB 1 and 2 ====================");
         Car car1 = new Car("BMW", "Black", 2018);
         Car car2 = new Car("Toyota", "White", 2022);
-        Car car3 = new Car("Audi","Gray",2026);
+        Car car3 = new Car("Audi", "Gray", 2026);
         car1.displayDetails();
         car2.displayDetails();
         car3.displayDetails();
@@ -47,7 +50,7 @@ public class Main {
 
         System.out.println("Final Balance: R" + account.getBalance());
         account.displayBalance();
-      // lab 3
+        // lab 3
         System.out.println("============LAB 4 ====================");
         Student student = new Student("Thabiso", "S1001");
         Teacher teacher = new Teacher("Mr Phaka", "Java");
@@ -78,7 +81,7 @@ public class Main {
         Students s4 = new Students("Thabo", 18, 63);
         // array
         Students[] students = {s1, s2, s3, s4};
-         //for loop
+        //for loop
         for (int i = 0; i < students.length; i++) {
             students[i].displayDetails();
             students[i].calculation();
@@ -92,12 +95,65 @@ public class Main {
 
         System.out.println("============LAB 9 ====================");
 
-        StudentRecord[] stu = {
+        StudentRecord[] srecord = {
                 new StudentRecord(101, "Amina Dlamini", 82),
                 new StudentRecord(102, "David Mokoena", 67),
                 new StudentRecord(103, "Lerato Nkosi", 43)
         };
 
 
+
+        ConsoleResultReporter reporter = new ConsoleResultReporter();
+        ResultMethod methods = new ResultMethod();
+
+        System.out.println("STUDENT RESULTS");
+        System.out.println("--------------------");
+
+        System.out.println("Total students: " + srecord.length);
+        System.out.println("==================");
+        System.out.println("SUMMARY");
+        System.out.println("==================");
+
+
+        for (int i = 0; i < srecord.length; i++) {
+            reporter.printStudentResult(srecord[i]);
+        }
+
+        System.out.println("SUMMARY");
+        System.out.println("****************");
+
+        if (srecord.length > 0) {
+
+            System.out.println("Distinctions: " + methods.countResults(
+                    srecord, reporter, ResultStatus.DISTINCTION));
+
+            System.out.println("Passes: "
+                    + methods.countResults(
+                    srecord, reporter, ResultStatus.PASS));
+
+            System.out.println("Supplementary: "
+                    + methods.countResults(
+                    srecord, reporter, ResultStatus.SUPPLEMENTARY));
+
+            System.out.println("Failures: "
+                    + methods.countResults(
+                    srecord, reporter, ResultStatus.FAIL));
+
+            System.out.printf("Average score: %.2f%n",
+                    methods.calculateAverage(srecord));
+
+            StudentRecord highest = methods.findHighest(srecord);
+            StudentRecord lowest = methods.findLowest(srecord);
+
+            System.out.println("Highest score: "
+                    + highest.score() + " (" + highest.fullName() + ")");
+
+            System.out.println("Lowest score: "
+                    + lowest.score() + " (" + lowest.fullName() + ")");
+
+        }
+        else {
+            System.out.println("No student records available.");
+        }
     }
 }
