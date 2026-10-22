@@ -114,5 +114,36 @@ public class Main {
         for (StudentRecord student_ : students_) {
             reporter.printStudentResult(student_);
         }
+
+//        PART 5
+        int pass_count_ = 0;
+        int supplementary_count = 0;
+        int fail_count = 0;
+        double total_score = 0;
+        StudentRecord highest_student = students_[0];
+        StudentRecord lowest_student = students_[0];
+
+        for (StudentRecord student_ : students_) {
+            ResultStatus status = reporter.determineStatus(student_.score());
+
+            if (status == ResultStatus.PASS) {
+                pass_count++;
+            } else if (status == ResultStatus.SUPPLEMENTARY) {
+                supplementary_count++;
+            } else if (status == ResultStatus.FAIL) {
+                fail_count++;
+            }
+
+            total_score += student_.score();
+
+            if (student_.score() > highest_student.score()) {
+                highest_student = student_;
+            }
+            if (student_.score() < lowest_student.score()) {
+                lowest_student = student_;
+            }
+        }
+
+        double average_score = students_.length > 0 ? total_score / students_.length : 0.0;
     }
 }
