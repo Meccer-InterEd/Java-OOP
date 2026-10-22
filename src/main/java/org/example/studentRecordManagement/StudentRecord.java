@@ -2,7 +2,7 @@ package org.example.studentRecordManagement;
 
 public record StudentRecord(int studentId, String fullName, int score) {
     public StudentRecord {
-        if(studentId < 0 || studentId > 100){
+        if(studentId < 0){
             System.out.println("Invalid student id");
         }
         if(fullName.isBlank()){

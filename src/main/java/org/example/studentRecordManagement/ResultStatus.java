@@ -9,7 +9,7 @@ public class ResultStatus {
         }
 
         if(score < 50){
-            return ResultsStatusEnum.PASS;
+            return ResultsStatusEnum.FAIL;
         } else if (score <= 74) {
             return ResultsStatusEnum.SUPPLEMENTARY;
         }
