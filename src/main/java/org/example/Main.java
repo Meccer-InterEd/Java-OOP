@@ -88,6 +88,24 @@ public class Main {
             System.out.println("Score: "+score+" = "+getStatus(score));
 
         }
+        System.out.println("============================");
+
+        StudentRecord stu1 = new StudentRecord(11,"Mancoba",71);
+        StudentRecord stu2 = new StudentRecord(12,"Mana",60);
+        StudentRecord stu3 = new StudentRecord(13,"Macoa",55);
+        StudentRecord stu4 = new StudentRecord(14,"Manc",80);
+        StudentRecord stu5 = new StudentRecord(15,"Moba",99);
+
+        StudentRecord[] students = {stu1,stu2,stu3,stu4,stu5};
+
+        for (StudentRecord s : students){
+
+            System.out.println("Student ID: "+s.studentId());
+            System.out.println("Student name: "+s.fullName());
+            System.out.println("Student score: "+s.score());
+            System.out.println("----------------------------");
+        }
+
 
 
 
