@@ -46,13 +46,13 @@ public class Main {
         //Part 4
 
         StudentRecord[] students = {
-                                    new StudentRecord(22203082,"Thamsanqa",81),
-                                    new StudentRecord(22204092,"Gift",56),
+                                    new StudentRecord(22203082,"Thamsanqa",80),
+                                    new StudentRecord(22204092,"Gift",49),
                                     new StudentRecord(22205076,"Thami",34),
-                                    new StudentRecord(22206089,"Nosipho",78),
-                                    new StudentRecord(22207085,"DeadPool",81),
-                                    new StudentRecord(22208067,"SpiderMan",50),
-                                    new StudentRecord(22209363,"Thor",74),
+                                    new StudentRecord(22206089,"Nosipho",74),
+                                    new StudentRecord(22207085,"DeadPool",75),
+                                    new StudentRecord(22208067,"SpiderMan",79),
+                                    new StudentRecord(22209363,"Thor",50),
                                     new StudentRecord(22210567,"Dr Doom",100),
 
                                      };
@@ -64,28 +64,30 @@ public class Main {
 //
 //
 //            }
-        System.out.println("==================");
-        System.out.println("Advanced for Loop");
 
         int failCounter = 0;
         int passCounter = 0;
         int needSupp = 0;
+        int distinctionCount = 0;
         int sumScore = 0;
         int avgScore ;
 
-
+        System.out.println("STUDENT RESULTS");
+        System.out.println("================");
             for(StudentRecord s : students) {
                 ConsoleResultReporter crr = new ConsoleResultReporter();
 
                 crr.printStudentResult(s);
-                System.out.println("=================");
+               // System.out.println("=================");
 
                 sumScore = sumScore + s.score();
                 if (crr.determineStatus(s.score()) == ResultStatus.PASS) {
                     passCounter++;
                 } else if (crr.determineStatus(s.score()) == ResultStatus.SUPPLEMENTARY) {
                     needSupp++;
-                } else {
+                }else if(crr.determineStatus(s.score()) == ResultStatus.DISTINCTION){
+                    distinctionCount++;
+                }else {
                     failCounter++;
                 }
 
@@ -117,16 +119,18 @@ public class Main {
 
         }
         avgScore = sumScore/ students.length;
-        System.out.println("Overall Results");
+        System.out.println("Summary");
         System.out.println("============"+
+                "\nTotal students: " + students.length +
+                "\nDistinction: " + distinctionCount +
                 "\nPassed: " + passCounter +
                 "\nNeed Supplementary: " + needSupp +
                 "\nFailed: " + failCounter +
                 "\n================" +
                 "\nAverage Score: " + avgScore +
                 "\n===============" +
-                "\nHighest Student: " + highestStudent.fullName() + " | Score: " + highestStudent.score()+
-                "\nLowest Student: " + lowestStudent.fullName()+ " | Score: " + lowestStudent.score());
+                "\nHighest score: " + highestStudent.score() + "(" + highestStudent.fullName()+")" +
+                "\nLowest score: " + lowestStudent.score()+ "(" + lowestStudent.fullName() + ")");
 
 
     }

@@ -6,10 +6,10 @@ public class ConsoleResultReporter implements ResultReporter{
 
     @Override
     public void printStudentResult(StudentRecord student) {
-        System.out.println("Student number: " + student.studentId() +
-                            "\nName: " + student.fullName() +
-                            "\nScore: " + student.score() +
-                            "\nResult: " + determineStatus(student.score()));
+        System.out.println("ID: " + student.studentId() +
+                            " | Name: " + student.fullName() +
+                            " | Score: " + student.score() +
+                            " | Status: " + determineStatus(student.score()));
     }
 
     @Override
@@ -24,11 +24,13 @@ public class ConsoleResultReporter implements ResultReporter{
 
            result = ResultStatus.SUPPLEMENTARY;
 
-       }else if(score >= 75 && score <= 100){
+       }else if(score >= 75 && score <= 79){
 
            result = ResultStatus.PASS;
 
-       }else{
+       }else if(score >= 80 && score <= 100){
+            result = ResultStatus.DISTINCTION;
+        }else{
            System.out.println("Enter Proper score, a number greater than or qual to 0 ");
        }
         return result;
