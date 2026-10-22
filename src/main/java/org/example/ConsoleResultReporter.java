@@ -5,20 +5,23 @@ public class ConsoleResultReporter implements ResultReporter {
         @Override
         public ResultsStatus determineStatus(int score) {
 
-            if (score < 0 || score > 100) {
+
+            if (score > 0 || score < 100) {
+                if (score <= 0 || score <= 49){
+                    return ResultsStatus.FAIL;
+                } else if (score <= 50 || score <= 74) {
+                    return ResultsStatus.SUPPLEMENTARY;
+                } else if(score <= 75 || score <= 79){
+                    return ResultsStatus.PASS;
+                }else {
+                    return ResultsStatus.DISTINCTION;
+                }
+            }else{
                 System.out.println("Invalid Score");
-            } else if (score >= 0 || score <= 49) {
-                return ResultsStatus.FAIL;
-            } else if (score >= 50 || score <= 74) {
-                return ResultsStatus.SUPPLEMENTARY;
-                
-            } else if (score >= 75 || score <= 79) {
-               return ResultsStatus.PASS;
-                
-            } else {
-                return ResultsStatus.DISTINCTION;
             }
-            return ResultsStatus.FAIL ;
+            return ResultsStatus.FAIL;
+
+
         }
 
         @Override

@@ -101,19 +101,90 @@ public class Main {
             }
         }
 
-        System.out.println("=======================================================");
+        System.out.println("===============================================================");
 
+        ConsoleResultReporter reporter = new ConsoleResultReporter();
 
         StudentRecord[] students = {
                 new StudentRecord(101, "Amina Dlamini", 82),
-                new StudentRecord(102, "David Mokoena", 67),
+                new StudentRecord(102, "David Mokoena", 78),
                 new StudentRecord(103, "Lerato Nkosi", 43),
                 new StudentRecord(104, "Neo Kunene", 37),
                 new StudentRecord(105, "Thabiso Ditshego", 56),
                 new StudentRecord(106, "Nhlanhla Dlamini", 70),
-                new StudentRecord(107, "Mbali Zwane", 50),
+                new StudentRecord(107, "Mbali Zwane", 75),
                 new StudentRecord(108, "Precious Ntuli", 100)
         };
+        System.out.println("Student Results");
+        System.out.println("--------------------");
+
+        for (int i = 0; i < students.length; i++) {
+            reporter.printStudentResult(students[i]);
+        }
+
+        int passCounter = 0;
+        int suppCounter = 0;
+        int failCounter = 0;
+        int distCounter = 0;
+
+        for (int i = 0; i < students.length; i++) {
+            int score = students[i].score();
+            ResultsStatus status = reporter.determineStatus(score);
+
+            if ( status == ResultsStatus.FAIL) {
+                failCounter++;
+            } else if( status == ResultsStatus.PASS) {
+                passCounter++;
+            } else if( status == ResultsStatus.SUPPLEMENTARY) {
+                suppCounter++;
+            }else if(status == ResultsStatus.DISTINCTION){
+                distCounter++;
+            }
+        }
+        double totalScore = 0;
+        double avg = 0;
+
+
+        for (int i = 0; i < students.length; i++){
+            int score = students[i].score();
+            totalScore = totalScore + score;
+        }
+        avg = totalScore / students.length;
+
+
+        double high = 0;
+        String sname = "";
+        for (int i = 0; i < students.length; i++){
+            int score = students[i].score();
+            if (score > high){
+                high = score;
+                sname = students[i].fullName();
+            }
+        }
+
+        double low = 100;
+        String stname = "";
+        for (int i = 0; i < students.length; i++){
+            int score = students[i].score();
+            if (score < low){
+                low = score;
+                stname = students[i].fullName();
+            }
+        }
+
+
+
+
+        System.out.println("--------------------");
+        System.out.println("Total  students: " + students.length);
+        System.out.println("Failures: " + failCounter);
+        System.out.println("Passes : " + passCounter);
+        System.out.println("Supplementary: " + suppCounter);
+        System.out.println("Distinctions: " + distCounter);
+        System.out.println("Average score " + avg);
+        System.out.println("Highest score: " + high + " Student name: " + sname);
+        System.out.println("Lowest score: " + low + " Student name: " + stname);
+
 
 
     }
