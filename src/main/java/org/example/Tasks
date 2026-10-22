@@ -39,3 +39,8 @@ Lab 8
 
 Part 2
  3. The difference i see is that methods in a record are automatically created.
+
+
+Part 4
+
+5. The interface determines the methods the ConsoleResultReporter class will have.

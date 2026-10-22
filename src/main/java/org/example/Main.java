@@ -13,11 +13,10 @@ public class Main {
 
         StudentRecord[] students = {student, student2, student3, student4, student5};
 
-        for(StudentRecord s: students) {
+       for(StudentRecord s: students) {
 
-            System.out.println(s.fullName() + " " + s.score());
-        }
-
+           System.out.println(s.fullName() + " " + s.score());
+       }
 
     }
 }
