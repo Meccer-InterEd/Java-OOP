@@ -1,4 +1,4 @@
-package org.example;
+package za.co.mie;
 
 abstract class Payment {
     public abstract void pay(double amount);

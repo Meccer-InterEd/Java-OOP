@@ -1,4 +1,4 @@
-package org.example;
+package za.co.mie;
 
 public class Student extends Person {
     String student_number;

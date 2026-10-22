@@ -1,4 +1,4 @@
-package org.example;
+package za.co.mie;
 
 public class Teacher extends Person {
     String subject;

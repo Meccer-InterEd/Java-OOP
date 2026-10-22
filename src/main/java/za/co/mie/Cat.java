@@ -1,4 +1,4 @@
-package org.example;
+package za.co.mie;
 
 class Cat extends Animal {
     @Override
