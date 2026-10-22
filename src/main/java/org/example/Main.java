@@ -70,12 +70,17 @@ public class Main {
         System.out.println("Class average is " + classAverage);
 
         int[] testScores = {0, 45, 50, 76, 75, 99, 101, -60};
-        for (int score: testScores){
+        for (int score : testScores) {
 
             ResultsStatus status = ResultsStatus.getStatus(score);
             System.out.println("Score:" + score + " status:" + status);
-        }
 
+
+
+
+            }
+        }
     }
-}
+
+
 
