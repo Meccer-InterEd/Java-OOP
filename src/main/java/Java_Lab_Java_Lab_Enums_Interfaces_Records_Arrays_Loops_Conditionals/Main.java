@@ -20,5 +20,12 @@ public class Main {
         System.out.println("Student: " + studentRecord4.fullName() + "'s score is: " + studentRecord4.score());
         System.out.println("Student: " + studentRecord5.fullName() + "'s score is: " + studentRecord5.score());
         System.out.println("-----------------------------------------------------");
+
+        StudentRecord[] students = {studentRecord1, studentRecord2, studentRecord3, studentRecord4, studentRecord5};
+        ConsoleResultReporter consoleResultReporter = new ConsoleResultReporter();
+        for (StudentRecord studentRecord: students) {
+            consoleResultReporter.printStudentResult(studentRecord);
+        }
+        System.out.println("-----------------------------------------------------");
     }
 }

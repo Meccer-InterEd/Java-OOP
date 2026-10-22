@@ -2,3 +2,9 @@ Part 2: Explain one difference between a record and a traditional class with fie
 - A record automatically generates fields and accessor methods matching the field name directly,
   whereas a traditional class requires one to manually declare fields,
   write constructor logic, and define getter methods.
+--------------------------------------------------------------------------------------------------------
+
+Part 3: In your own words, explain the role of the interface in this program.
+- Is that it forces the ConsoleResultReporter to include together determineStatus and
+  printStudentResult, guaranteeing that any future class can process a StudentRecord
+  the exact same way and prints cleanly.

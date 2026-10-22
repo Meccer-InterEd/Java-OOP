@@ -1,7 +1,7 @@
 package Java_Lab_Java_Lab_Enums_Interfaces_Records_Arrays_Loops_Conditionals;
 
 public class ResultStatus {
-    enum resultStatus {
+    public enum resultStatus {
         PASS,
         SUPPLEMENTARY,
         FAIL
