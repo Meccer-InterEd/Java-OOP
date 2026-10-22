@@ -7,7 +7,7 @@ public class MainInterFace_Lab {
         ResultStatus rs = new ResultStatus();
         System.out.println(rs.scoreStatus(40));
 
-        StudentRecord sr1 = new StudentRecord(-21345,"Lona",60);
+        StudentRecord sr1 = new StudentRecord(21345,"Lona",60);
         StudentRecord sr2 = new StudentRecord(21346,"Siyabonga",6);
         StudentRecord sr3 = new StudentRecord(21347,"Ditebogo",59);
         StudentRecord sr4 = new StudentRecord(21348,"Cebisa",65);
@@ -20,6 +20,13 @@ public class MainInterFace_Lab {
         System.out.println("Full name: " + sr4.fullName() + " and their score is: " + sr4.score());
         System.out.println("Full name: " + sr5.fullName() + " and their score is: " + sr5.score());
         System.out.println(" --------" );
+
+        ConsoleResultReporter crr = new ConsoleResultReporter();
+        crr.printStudentResult(sr1);
+        crr.printStudentResult(sr2);
+        crr.printStudentResult(sr3);
+        crr.printStudentResult(sr4);
+        crr.printStudentResult(sr5);
     }
 }
 
