@@ -120,6 +120,8 @@ public class Main {
         results.scoreStatus(74);
         results.scoreStatus(75);
         results.scoreStatus(100);
+        results.scoreStatus(-101);
+        results.scoreStatus(-1);
         /* If the score was -1 or 101 it would display 'Invalid' since
         I added validation to the method, that marks less than 0 and marks greater
         than zero will be given a sore status/result. They are out of bounds.
