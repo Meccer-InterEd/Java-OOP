@@ -8,9 +8,9 @@ public class ConsoleResultReporter implements ResultReporter{
 
     @Override
     public void printStudentResult(StudentRecord student){
-        System.out.println("Student No."+student.studentId()+"\n" +
-                "Student names: "+student.fullName()+"\n" +
-                "Score: "+student.score()+"\n" +
-                "Outcome: "+determineStatus(student.score()).toString()+"\n");
+        System.out.println("ID: "+student.studentId()+" | " +
+                "Name: "+student.fullName()+" | " +
+                "Score: "+student.score()+" | " +
+                "Status: "+determineStatus(student.score()).toString()+"\n");
     }
 }

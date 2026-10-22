@@ -1,5 +1,6 @@
 package org.example;
 
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -211,14 +212,14 @@ public class Main {
         ConsoleResultReporter resultReporter = new ConsoleResultReporter();
 
         for (int i = 0; i < numStudents; i++){
-            System.out.println("Student names: "+studentRecords[i].fullName()+"\n" +
+            System.out.println("Name: "+studentRecords[i].fullName()+" | " +
                     "Score: "+studentRecords[i].score()+"\n");
         }
 
-        for(StudentRecord student_record : studentRecords){
-            resultReporter.printStudentResult(student_record);
-//            student_record.justDisplay();
-        }
+//        for(StudentRecord student_record : studentRecords){
+//            resultReporter.printStudentResult(student_record);
+////            student_record.justDisplay();
+//        }
         System.out.println("The difference between a record and a traditional class is that " +
                 "with the former, the instance variables are constants by default.\n" +
                 "Whereas with the latter, instance variables can change values unless you " +
@@ -274,17 +275,26 @@ public class Main {
 
             avgClassMark += ((double)aggregateTotal / numStudents);
 
-            System.out.println("\n\nSummary Report::::::::::::::::::\n");
-            System.out.println("Class average                                  -> "+avgClassMark);
-            System.out.println("Number of students who passed w/o distinctions -> "+numPassed);
-            System.out.println("Number of students who passed w/ distinctions  -> "+numDistinctions);
-            System.out.println("Number of students who need supplementary exam -> "+numSupplementary);
-            System.out.println("Number of students who failed                  -> "+numFailed);
-            System.out.println("------------------------------------------------------------");
-            System.out.println("The highest scorer is "+highestScorer.fullName()+"," +
-                    " with a mark of "+highestScorer.score()+".\n" +
-                    "The lowest scorer is "+lowestScorer.fullName()+", with a mark of " +
-                    lowestScorer.score()+".\n");
+            System.out.println("\n\nSTUDENT RESULTS");
+            System.out.println("---------------");
+            for(StudentRecord student_record : studentRecords){
+                resultReporter.printStudentResult(student_record);
+//            student_record.justDisplay();
+            }
+
+
+            System.out.println("\nSummary");
+            System.out.println("-------");
+            System.out.println("Total students: "+numStudents);
+            System.out.println("Distinctions: "+numDistinctions);
+            System.out.println("Passes: "+numPassed);
+            System.out.println("Supplementary: "+numSupplementary);
+            System.out.println("Failures: "+numFailed);
+            System.out.println("Average score: "+avgClassMark);
+            System.out.println("Highest score: "+highestScorer.score()+" " +
+                    highestScorer.fullName()+".\n" +
+                    "Lowest score: "+lowestScorer.score()+" "+
+                    lowestScorer.fullName()+".\n");
         } catch (Exception e) {
             throw new RuntimeException("Could not manage to generate a summary report because the array is empty!!!!!");
         }
