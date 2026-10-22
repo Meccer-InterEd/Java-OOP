@@ -237,5 +237,50 @@ public class Main {
                     "index "+i+" -> "+studentRecords[i].fullName()
             );
         }
+
+        try{
+            int numPassed = 0;
+            int numSupplementary = 0;
+            int numFailed = 0;
+            double avgClassMark = 0;
+            int aggregateTotal = 0;
+            StudentRecord highestScorer = studentRecords[0];
+            StudentRecord lowestScorer = studentRecords[0];
+
+            for(StudentRecord _student : studentRecords){
+                if (resultReporter.determineStatus(_student.score()) == ResultStatus.PASS){
+                    numPassed += 1;
+                } else if (resultReporter.determineStatus(_student.score()) == ResultStatus.FAIL){
+                    numFailed += 1;
+                } else {
+                    numSupplementary += 1;
+                }
+
+                aggregateTotal += _student.score();
+
+                if (_student.score() > highestScorer.score()){
+                    highestScorer = _student;
+                }
+
+                if (_student.score() < lowestScorer.score()){
+                    lowestScorer = _student;
+                }
+            }
+
+            avgClassMark += ((double)aggregateTotal / numStudents);
+
+            System.out.println("\n\nSummary Report::::::::::::::::::\n");
+            System.out.println("Class average                                  -> "+avgClassMark);
+            System.out.println("Number of students who passed                  -> "+numPassed);
+            System.out.println("Number of students who need supplementary exam -> "+numSupplementary);
+            System.out.println("Number of students who failed                  -> "+numFailed);
+            System.out.println("------------------------------------------------------------");
+            System.out.println("The highest scorer is "+highestScorer.fullName()+"," +
+                    " with a mark of "+highestScorer.score()+".\n" +
+                    "The lowest scorer is "+lowestScorer.fullName()+", with a mark of " +
+                    lowestScorer.score()+".\n");
+        } catch (Exception e) {
+            throw new RuntimeException("Could not manage to generate a summary report because the array is empty!!!!!");
+        }
     }
 }
