@@ -129,6 +129,19 @@ public class Main {
         String values can be changed, and when using an enum, the whole purpose
         is to declare constant values, preventing the chance os them every being changed.
          */
+        System.out.println("Part 2: ");
+        StudentRecord student1 = new StudentRecord(123456, "Jane Doe", 7);
+        StudentRecord student2 = new StudentRecord(123456, "Sarah Smith", 7);
+        StudentRecord student3 = new StudentRecord(123456, "Joe Jonas", 7);
+        StudentRecord student4 = new StudentRecord(123456, "Ranveer Singh", 7);
+        StudentRecord student5 = new StudentRecord(123456, "John Doe", 7);
+
+        System.out.println(student1.displayResults());
+        System.out.println(student2.displayResults());
+        System.out.println(student3.displayResults());
+        System.out.println(student4.displayResults());
+        System.out.println(student5.displayResults());
+
 
     }
 
