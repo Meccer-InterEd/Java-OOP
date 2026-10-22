@@ -189,6 +189,8 @@ public class Main {
         System.out.println("Test value 50 produces:\t"+ResultStatus.scoreStatus(50));
         System.out.println("Test value 74 produces:\t"+ResultStatus.scoreStatus(74));
         System.out.println("Test value 75 produces:\t"+ResultStatus.scoreStatus(75));
+        System.out.println("Test value 79 produces:\t"+ResultStatus.scoreStatus(79));
+        System.out.println("Test value 80 produces:\t"+ResultStatus.scoreStatus(80));
         System.out.println("Test value 100 produces:\t"+ResultStatus.scoreStatus(100));
         System.out.println("\nIf a value of -1 or 101 is provided as an input, the " +
                 "program will throw an IllegalArgumentException with a message.\n\n");
@@ -244,6 +246,7 @@ public class Main {
             int numFailed = 0;
             double avgClassMark = 0;
             int aggregateTotal = 0;
+            int numDistinctions = 0;
             StudentRecord highestScorer = studentRecords[0];
             StudentRecord lowestScorer = studentRecords[0];
 
@@ -252,6 +255,8 @@ public class Main {
                     numPassed += 1;
                 } else if (resultReporter.determineStatus(_student.score()) == ResultStatus.FAIL){
                     numFailed += 1;
+                } else if (resultReporter.determineStatus(_student.score()) == ResultStatus.DISTINCTION){
+                  numDistinctions += 1;
                 } else {
                     numSupplementary += 1;
                 }
@@ -271,7 +276,8 @@ public class Main {
 
             System.out.println("\n\nSummary Report::::::::::::::::::\n");
             System.out.println("Class average                                  -> "+avgClassMark);
-            System.out.println("Number of students who passed                  -> "+numPassed);
+            System.out.println("Number of students who passed w/o distinctions -> "+numPassed);
+            System.out.println("Number of students who passed w/ distinctions  -> "+numDistinctions);
             System.out.println("Number of students who need supplementary exam -> "+numSupplementary);
             System.out.println("Number of students who failed                  -> "+numFailed);
             System.out.println("------------------------------------------------------------");
@@ -282,5 +288,7 @@ public class Main {
         } catch (Exception e) {
             throw new RuntimeException("Could not manage to generate a summary report because the array is empty!!!!!");
         }
+
+
     }
 }

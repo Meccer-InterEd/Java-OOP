@@ -1,6 +1,7 @@
 package org.example;
 
 public enum ResultStatus {
+    DISTINCTION,
     PASS,
     SUPPLEMENTARY,
     FAIL;
@@ -8,7 +9,9 @@ public enum ResultStatus {
     public static ResultStatus scoreStatus(double mark) {
         if (mark < 0 || mark > 100) {
             throw new IllegalArgumentException("Score must be between 0 and 100");
-        } else if (mark >= 75){
+        } else if (mark >= 80){
+            return DISTINCTION;
+        } else if (mark >= 75 && mark <= 79){
             return PASS;
         } else if (mark >= 50 && mark <= 74){
             return SUPPLEMENTARY;
