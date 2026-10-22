@@ -178,5 +178,64 @@ public class Main {
         System.out.println("\nLab 08 Question 04: Which annotation should be used for the " +
                 "overridden method?\n" +
                 "- @Override\n\n");
+
+
+        /*
+        Lab on Enums, Interfaces, and Records
+         */
+        System.out.println("Testing the result status boundary values:");
+        System.out.println("Test value 0 produces:\t"+ResultStatus.scoreStatus(0));
+        System.out.println("Test value 49 produces:\t"+ResultStatus.scoreStatus(49));
+        System.out.println("Test value 50 produces:\t"+ResultStatus.scoreStatus(50));
+        System.out.println("Test value 74 produces:\t"+ResultStatus.scoreStatus(74));
+        System.out.println("Test value 75 produces:\t"+ResultStatus.scoreStatus(75));
+        System.out.println("Test value 100 produces:\t"+ResultStatus.scoreStatus(100));
+        System.out.println("\nIf a value of -1 or 101 is provided as an input, the " +
+                "program will throw an IllegalArgumentException with a message.\n\n");
+
+
+        StudentRecord[] studentRecords = {
+                new StudentRecord(1, "John Doe",75),
+                new StudentRecord(2, "Jane Doe",78),
+                new StudentRecord(3, "Alejandro Martinez",85),
+                new StudentRecord(4, "Pedro Pascal",27),
+                new StudentRecord(5, "Demetrius Johnson",97),
+                new StudentRecord(101, "Amina Dlamini", 82),
+                new StudentRecord(102, "David Mokoena", 67),
+                new StudentRecord(103, "Lerato Nkosi", 43)
+        };
+
+        int numStudents = studentRecords.length;
+        ConsoleResultReporter resultReporter = new ConsoleResultReporter();
+
+        for (int i = 0; i < numStudents; i++){
+            System.out.println("Student names: "+studentRecords[i].fullName()+"\n" +
+                    "Score: "+studentRecords[i].score()+"\n");
+        }
+
+        for(StudentRecord student_record : studentRecords){
+            resultReporter.printStudentResult(student_record);
+//            student_record.justDisplay();
+        }
+        System.out.println("The difference between a record and a traditional class is that " +
+                "with the former, the instance variables are constants by default.\n" +
+                "Whereas with the latter, instance variables can change values unless you " +
+                "explicitly mark them as constants.\n");
+
+        System.out.println("The traditional for loop requires 3 conditions namely:\n" +
+                "- The starting index.\n" +
+                "- The ending index / loop termination condition.\n" +
+                "- An increment / decrement value\n" +
+                "On the other hand, advanced for loops requires only 2 components:\n" +
+                "- The data type and name of a placeholder variable which will temporarily store " +
+                "the relevant data values.\n" +
+                "- The name of the data collection you are looping through.\n");
+
+        System.out.println("Proof that indexes start at 0:::\n");
+        for (int i = 0; i < numStudents; i++){
+            System.out.println(
+                    "index "+i+" -> "+studentRecords[i].fullName()
+            );
+        }
     }
 }
