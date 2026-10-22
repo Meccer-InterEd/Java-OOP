@@ -1,5 +1,7 @@
 package org.example;
 
+import static org.example.ResultStatus.getStatus;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -50,35 +52,42 @@ public class Main {
 //        payment1.pay(250);
 //        payment2.pay(100);
 //        payment3.pay(500);
-        Student2[] students = {new Student2("Mancoba",23,77),new Student2("Ancoba",22,51),new Student2("Ncoba",25,90),new Student2("Babab",20,41)};
-        int passed = 0;
-        double highest = students[0].getMark();
-        double total = 0;
-        int distinction = 0;
+//        Student2[] students = {new Student2("Mancoba",23,77),new Student2("Ancoba",22,51),new Student2("Ncoba",25,90),new Student2("Babab",20,41)};
+//        int passed = 0;
+//        double highest = students[0].getMark();
+//        double total = 0;
+//        int distinction = 0;
+//
+//
+//        for(Student2 stud : students){
+//
+//            stud.displayDetails();
+//            System.out.println("-------------------------");
+//            if(stud.hasPassed()){
+//                passed++;
+//            }
+//            if(stud.getMark()>highest){
+//                highest = stud.getMark();
+//            }
+//            if(stud.getMark()>=80){
+//                distinction++;
+//            }
+//            total += stud.getMark();
+//        }
+//        System.out.println("Highest mark: "+highest);
+//        System.out.println("Average mark: "+ total/ students.length);
+//        System.out.println("Number of students passed: "+passed);
+//        System.out.println("Number of students with distinction: "+distinction);
+//
+//
+//
 
 
-        for(Student2 stud : students){
+        int[] scores = {0,49,50,74,75,100};
+        for (int score : scores){
+            System.out.println("Score: "+score+" = "+getStatus(score));
 
-            stud.displayDetails();
-            System.out.println("-------------------------");
-            if(stud.hasPassed()){
-                passed++;
-            }
-            if(stud.getMark()>highest){
-                highest = stud.getMark();
-            }
-            if(stud.getMark()>=80){
-                distinction++;
-            }
-            total += stud.getMark();
         }
-        System.out.println("Highest mark: "+highest);
-        System.out.println("Average mark: "+ total/ students.length);
-        System.out.println("Number of students passed: "+passed);
-        System.out.println("Number of students with distinction: "+distinction);
-
-
-
 
 
 
