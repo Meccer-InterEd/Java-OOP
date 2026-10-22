@@ -1,5 +1,7 @@
 package org.example.StudentResultManagementSystem;
 
+
+
 public class Main {
     public static void main(String[] args){
 
@@ -55,21 +57,76 @@ public class Main {
 
                                      };
 
-            for(int i = 0; i < students.length; i++){
-                System.out.println("Name: " + students[i].fullName() +
-                                    "\nScore: " + students[i].score() +
-                                    "\n================");
-            }
+//            for(int = i = 0; i < students.length; i++){
+//                System.out.println("Name: " + students[i].fullName() +
+//                                    "\nScore: " + students[i].score() +
+//                                    "\n================");
+//
+//
+//            }
         System.out.println("==================");
         System.out.println("Advanced for Loop");
 
-            for(StudentRecord s : students){
+        int failCounter = 0;
+        int passCounter = 0;
+        int needSupp = 0;
+        int sumScore = 0;
+        int avgScore ;
+
+
+            for(StudentRecord s : students) {
                 ConsoleResultReporter crr = new ConsoleResultReporter();
+
                 crr.printStudentResult(s);
                 System.out.println("=================");
+
+                sumScore = sumScore + s.score();
+                if (crr.determineStatus(s.score()) == ResultStatus.PASS) {
+                    passCounter++;
+                } else if (crr.determineStatus(s.score()) == ResultStatus.SUPPLEMENTARY) {
+                    needSupp++;
+                } else {
+                    failCounter++;
+                }
+
+
+
             }
 
 
+        StudentRecord lowestStudent = null;
+        StudentRecord highestStudent = null;
+
+        int  highScore = students[0].score();
+        int lowScore = students[0].score();
+
+        for(int i = 0; i < students.length; i++){
+
+            if(students[i].score() > highScore){
+                highScore = students[i].score();
+                highestStudent = students[i];
+
+            }
+
+            if(students[i].score() < lowScore){
+                lowScore = students[i].score();
+                lowestStudent = students[i];
+
+            }
+
+
+        }
+        avgScore = sumScore/ students.length;
+        System.out.println("Overall Results");
+        System.out.println("============"+
+                "\nPassed: " + passCounter +
+                "\nNeed Supplementary: " + needSupp +
+                "\nFailed: " + failCounter +
+                "\n================" +
+                "\nAverage Score: " + avgScore +
+                "\n===============" +
+                "\nHighest Student: " + highestStudent.fullName() + " | Score: " + highestStudent.score()+
+                "\nLowest Student: " + lowestStudent.fullName()+ " | Score: " + lowestStudent.score());
 
 
     }
