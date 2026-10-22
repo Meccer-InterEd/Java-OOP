@@ -114,7 +114,7 @@ public class Person {
 }
 ```
 
-Create a `Student` class that extends `Person`, has a `studentNumber`
+Create a `Students` class that extends `Person`, has a `studentNumber`
 field, and uses `super(name)` in its constructor. Create a `Teacher`
 class that extends `Person`, has a `subject` field, and also calls
 `super(name)`.
@@ -202,7 +202,7 @@ directly from an abstract class? 3. Why must subclasses implement
 
 ## Lab 7: Combined Project --- Student Management System
 
-Create a `Student` class with: - `private String name` -
+Create a `Students` class with: - `private String name` -
 `private int age` - `private double mark` - A constructor - Getter
 methods - `hasPassed()`, returning `true` when mark is at least 50 -
 `displayDetails()`, printing details and pass/fail result

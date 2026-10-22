@@ -24,7 +24,7 @@ public class Main {
         acc.displayBalance();
         System.out.println("==============================================================================");
         Student stud=new Student("Ntiyiso","220714241");
-        stud.introduce();
+        System.out.println("Student Name: "+stud.name);
         System.out.println("Student Number: " + stud.studNumber);
         System.out.println("==============================================================================");
         Teacher teach=new Teacher("Mr Chauke","PPB115D");
@@ -47,7 +47,9 @@ public class Main {
         payment3.pay(200);
         System.out.println("==============================================================================");
 
-
+        Students student = new Students("Lindiwe", 19, 76);
+        student.processStudents();
+        System.out.println("==============================================================================");
 
 
 
