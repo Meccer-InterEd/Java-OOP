@@ -70,7 +70,7 @@ public class Main {
         int needSupp = 0;
         int distinctionCount = 0;
         int sumScore = 0;
-        int avgScore ;
+        int avgScore = 0;
 
         System.out.println("STUDENT RESULTS");
         System.out.println("================");
@@ -118,7 +118,10 @@ public class Main {
 
 
         }
-        avgScore = sumScore/ students.length;
+
+        if(students != null) {
+            avgScore = sumScore / students.length;
+        }
         System.out.println("Summary");
         System.out.println("============"+
                 "\nTotal students: " + students.length +
