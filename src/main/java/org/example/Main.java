@@ -12,6 +12,8 @@ import org.example.Lab06_Abstraction.CardPayment;
 import org.example.Lab06_Abstraction.CashPayment;
 import org.example.Lab06_Abstraction.Payment;
 import org.example.Lab07_Combined_Project.Students;
+import org.example.Lab08_Debugging.Animals;
+import org.example.Lab09_StudentResults.StudentRecord;
 
 /*1. What is a class?
 A class is a blueprint or template used to create objects.
@@ -24,7 +26,7 @@ public class Main {
     public static void main(String[] args) {
 
         // lab 1 for  car
-        System.out.println("============LAB 4 ====================");
+        System.out.println("============LAB 1 and 2 ====================");
         Car car1 = new Car("BMW", "Black", 2018);
         Car car2 = new Car("Toyota", "White", 2022);
         Car car3 = new Car("Audi","Gray",2026);
@@ -36,7 +38,7 @@ public class Main {
         car2.startEngine();
 
         // lab 2  for balance account
-        System.out.println("============LAB 2 ====================");
+        System.out.println("============LAB 3 ====================");
         BankAccount account = new BankAccount();
         account.deposit(1000);
         account.withdraw(250);
@@ -46,7 +48,7 @@ public class Main {
         System.out.println("Final Balance: R" + account.getBalance());
         account.displayBalance();
       // lab 3
-        System.out.println("============LAB 3 ====================");
+        System.out.println("============LAB 4 ====================");
         Student student = new Student("Thabiso", "S1001");
         Teacher teacher = new Teacher("Mr Phaka", "Java");
         student.introduce();
@@ -54,7 +56,7 @@ public class Main {
         System.out.println("Student Number: " + student.studentNumber);
         System.out.println("Subject: " + teacher.subject);
 
-        System.out.println("============LAB 4 ====================");
+        System.out.println("============LAB 5 ====================");
         Animal animal1 = new Dog();
         Animal animal2 = new Cat();
         Animal animal3 = new Cow();
@@ -62,12 +64,12 @@ public class Main {
         animal1.makeSound();
         animal2.makeSound();
         animal3.makeSound();
-        System.out.println("============LAB 4 ====================");
+        System.out.println("============LAB 6 ====================");
         Payment payment1 = new CardPayment();
         Payment payment2 = new CashPayment();
         payment1.pay(250);
         payment2.pay(100);
-        System.out.println("============LAB 5 ====================");
+        System.out.println("============LAB 7 ====================");
 
         // create 4 students
         Students s1 = new Students("Lindiwe", 19, 90);
@@ -82,5 +84,20 @@ public class Main {
             students[i].calculation();
             System.out.println("------------------");
         }
+        System.out.println("============LAB 8 ====================");
+        Animals animal = new Animals("Sobi");
+        animal.speak();
+        Dog a = new Dog();
+        a.makeSound();
+
+        System.out.println("============LAB 9 ====================");
+
+        StudentRecord[] stu = {
+                new StudentRecord(101, "Amina Dlamini", 82),
+                new StudentRecord(102, "David Mokoena", 67),
+                new StudentRecord(103, "Lerato Nkosi", 43)
+        };
+
+
     }
 }
