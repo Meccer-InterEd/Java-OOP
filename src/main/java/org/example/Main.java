@@ -232,5 +232,23 @@ public class Main {
 
          */
 
+        //New labs on Interfaces, Enums and Records combined with some previously learned concepts
+
+        System.out.println(ResultStatus.scoreStatus(85));
+
+        /*
+        Lab 1 Questions:
+
+        1. Explain what should happen if the score is -1 or 101
+           The program should inform the user that the mark they entered to determine a score status
+           is invalid and should only be between 0 and 100 (inclusive)
+
+        2. An enum limits a variable to a known set of values. Why is that safer than storing status
+           as any text string?
+
+           It is safer because it restricts a variable to a predefined list of valid constants. This
+           helps us to prevent invalid values. The problem is that Strings can hold any text including
+           values which are not considered valid statuses
+         */
     }
 }
