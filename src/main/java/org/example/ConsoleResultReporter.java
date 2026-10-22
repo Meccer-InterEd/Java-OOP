@@ -13,7 +13,7 @@ public class ConsoleResultReporter implements  ResultReporter{
         }else{
             if(score > 74 ){
                 status = ResultStatus.PASS;
-            }else if(score > 50){
+            }else if(score >= 50){
                 status = ResultStatus.SUPPLEMENTARY;
             }else{
                 status = ResultStatus.FAIL;
@@ -26,10 +26,10 @@ public class ConsoleResultReporter implements  ResultReporter{
     @Override
     public void printStudentResult(StudentRecord student) {
 
-
         System.out.println("Student ID:" + student.studentId());
         System.out.println("Name:" + student.fullName());
         System.out.println("Score:" + student.score());
         System.out.println("Result:" + determineStatus(student.score()));
+        System.out.println("=============================");
     }
 }

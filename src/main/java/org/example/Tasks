@@ -41,6 +41,10 @@ Part 2
  3. The difference i see is that methods in a record are automatically created.
 
 
-Part 4
+Part 3
 
 5. The interface determines the methods the ConsoleResultReporter class will have.
+
+Part 4
+4. A traditional for loop has a condition defined on when it should stop whereas an enhanced for loop automatically iterates all the elements in a list without that defined condition'
+5.
