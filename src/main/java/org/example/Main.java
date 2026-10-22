@@ -101,5 +101,21 @@ public class Main {
             }
         }
 
+        System.out.println("=======================================================");
+
+
+        StudentRecord[] students = {
+                new StudentRecord(101, "Amina Dlamini", 82),
+                new StudentRecord(102, "David Mokoena", 67),
+                new StudentRecord(103, "Lerato Nkosi", 43),
+                new StudentRecord(104, "Neo Kunene", 37),
+                new StudentRecord(105, "Thabiso Ditshego", 56),
+                new StudentRecord(106, "Nhlanhla Dlamini", 70),
+                new StudentRecord(107, "Mbali Zwane", 50),
+                new StudentRecord(108, "Precious Ntuli", 100)
+        };
+
+
     }
+
     }
