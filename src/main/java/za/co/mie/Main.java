@@ -153,5 +153,20 @@ public class Main {
         }
 
         double average_score = students_.length > 0 ? total_score / students_.length : 0.0;
+
+
+//        PART 7
+        for (StudentRecord student_ : students_) {
+            reporter.printStudentResult(student_);
+        }
+
+        System.out.println("Total students: " + students_.length);
+        System.out.println("Distinctions: " + distinction_count);
+        System.out.println("Passes: " + pass_count_);
+        System.out.println("Supplementary: " + supplementary_count);
+        System.out.println("Failures: " + fail_count);
+        System.out.println("Average score: " + average_score);
+        System.out.println("Highest score: " + highest_student.score() + " (" + highest_student.full_name() + ")");
+        System.out.println("Lowest score: " + lowest_student.score() + " (" + lowest_student.full_name() + ")");
     }
 }
