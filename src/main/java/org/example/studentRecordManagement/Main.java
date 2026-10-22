@@ -3,6 +3,8 @@ package org.example.studentRecordManagement;
 import org.example.studentManagementSystem.Student;
 
 public class Main {
+    public static ConsoleResultReporter consoleResultReporter = new ConsoleResultReporter();
+
     public static void main(String[] args) {
 
         StudentRecord[] students = {
@@ -21,14 +23,47 @@ public class Main {
             System.out.println("FullName: " + students[i].fullName() + ". Score: " + students[i].score());
         }
 
-        ConsoleResultReporter consoleResultReporter = new ConsoleResultReporter();
 
         for (StudentRecord std: students){
             consoleResultReporter.printStudentResult(std);
         }
 
+        System.out.println("Average Score: " + scoreAvg(students));
 
     }
+
+    public static double scoreAvg(StudentRecord[] students){
+        double total = 0;
+        double average = 0;
+
+        if(students.length == 0){
+            System.out.println("Array is empty");
+            return average;
+        }
+
+
+        for (StudentRecord std: students){
+            total += std.score();
+        }
+
+        return total / students.length;
+    }
+
+
+   public static void statusCount(StudentRecord[] students){
+        int countFail = 0;
+        int countPass = 0;
+        int countSupplementary = 0;
+
+       for (StudentRecord std: students){
+           if(consoleResultReporter.determineStatus(std.score()) == ResultsStatusEnum.FAIL){
+               countFail += 1;
+           } else if (consoleResultReporter.determineStatus(std.score()) == ResultsStatusEnum.SUPPLEMENTARY) {
+               countSupplementary += 1;
+           }
+           countPass += 1;
+       }
+   }
 }
 
 
