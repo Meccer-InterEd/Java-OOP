@@ -253,9 +253,13 @@ public class Main {
 
         StudentRecord studentRecord1 = new StudentRecord(1, "Hishaam", 85);
         StudentRecord studentRecord2 = new StudentRecord(2, "Makwa", 85);
-        StudentRecord studentRecord3 = new StudentRecord(3, "Lona", 78);
-        StudentRecord studentRecord4 = new StudentRecord(4, "Ditebogo", 90);
-        StudentRecord studentRecord5 = new StudentRecord(5, "Andile", 89);
+        StudentRecord studentRecord3 = new StudentRecord(3, "Lona", 73);
+        StudentRecord studentRecord4 = new StudentRecord(4, "Ditebogo", 51);
+        StudentRecord studentRecord5 = new StudentRecord(5, "Andile", 45);
+        StudentRecord studentRecord6 = new StudentRecord(6, "John", 32);
+        StudentRecord studentRecord7 = new StudentRecord(7, "Jane", 75);
+        StudentRecord studentRecord8 = new StudentRecord(8, "Alice", 50);
+
 
         System.out.println("Student 1 name: " + studentRecord1.fullName());
         System.out.println("Student 2 mark: " + studentRecord2.score());
@@ -272,6 +276,34 @@ public class Main {
            One difference is that Records automatically provide getter methods and a constructor while
            with a traditional class you would have to write it yourself
 
+         */
+
+        StudentRecord[] studentRecords = {studentRecord1, studentRecord2, studentRecord3, studentRecord4,
+        studentRecord5, studentRecord6, studentRecord7, studentRecord8};
+
+        System.out.println("Number of students: " + studentRecords.length);
+
+        for (int i = 0; i < studentRecords.length; i++) {
+            System.out.println("Student " + (i + 1) + ": " + studentRecords[i].fullName() + " (mark: " +
+                    studentRecords[i].score() + ")");
+        }
+
+        ConsoleResultReporter consoleResultReporter = new ConsoleResultReporter();
+
+        for (StudentRecord s: studentRecords) {
+            System.out.println("Student " + s.fullName() + " result: " +
+                    consoleResultReporter.determineStatus(s.score()));
+        }
+
+        /*
+        Part 4 Questions:
+
+        1. Explain the difference between a traditional for loop and an enhanced for loop
+
+           Traditional for loops use an initialisation, condition and update expression to control the
+           way that it iterates and they allow access to elements in a collection through their index. An
+           enhanced for loop does all of this automatically and is much simpler to use provided that
+           you would not need to access the index of the elements
          */
 
 
