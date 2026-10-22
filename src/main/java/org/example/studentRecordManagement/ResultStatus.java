@@ -2,18 +2,18 @@ package org.example.studentRecordManagement;
 
 public class ResultStatus {
 
-    public ResultsStatus status(int score){
+    public static ResultsStatusEnum status(int score){
         if(score < 0 || score > 100){
             System.out.println("Invalid results");
             return null;
         }
 
         if(score < 50){
-            return ResultsStatus.PASS;
+            return ResultsStatusEnum.PASS;
         } else if (score <= 74) {
-            return ResultsStatus.SUPPLEMENTARY;
+            return ResultsStatusEnum.SUPPLEMENTARY;
         }
 
-        return ResultsStatus.PASS;
+        return ResultsStatusEnum.PASS;
     }
 }

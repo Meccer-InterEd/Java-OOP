@@ -1,6 +1,6 @@
 package org.example.studentRecordManagement;
 
-public enum ResultsStatus {
+public enum ResultsStatusEnum {
     PASS,
     SUPPLEMENTARY,
     FAIL
