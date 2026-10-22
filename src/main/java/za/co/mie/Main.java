@@ -67,5 +67,21 @@ public class Main {
         System.out.println("Average: " + average_mark);
         System.out.println("Students Passed: " + pass_count + " / " + students.length);
         System.out.println("Highest Mark: " + highest_mark);
+
+
+
+
+//        ENUMS - INTERFACES - RECORDS - ARRAYS - LOOPS - CONDITIONALS
+
+
+//        Part 1
+        Results results = new Results();
+//        System.out.println(results.get_result_status(-1));
+        System.out.println(results.get_result_status(10));
+        System.out.println(results.get_result_status(50));
+        System.out.println(results.get_result_status(75));
+//        System.out.println(results.get_result_status(101));
+
+
     }
 }
