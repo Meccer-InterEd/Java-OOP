@@ -25,21 +25,50 @@ public class Main {
 
         //Part 2
 
-        StudentRecord student1 = new StudentRecord(22203082,"Thamsanqa",81);
-        StudentRecord student2 = new StudentRecord(22204092,"Gift",56);
-        StudentRecord student3 = new StudentRecord(22205076,"Thami",34);
-        StudentRecord student4 = new StudentRecord(22206089,"Nosipho",78);
-        StudentRecord student5 = new StudentRecord(22207085,"Thamsanqa",81);
+//        StudentRecord student1 = new StudentRecord(22203082,"Thamsanqa",81);
+//        StudentRecord student2 = new StudentRecord(22204092,"Gift",56);
+//        StudentRecord student3 = new StudentRecord(22205076,"Thami",34);
+//        StudentRecord student4 = new StudentRecord(22206089,"Nosipho",78);
+//        StudentRecord student5 = new StudentRecord(22207085,"Thamsanqa",81);
 
         //Part 3
 
-        ConsoleResultReporter crr = new ConsoleResultReporter();
+//        ConsoleResultReporter crr = new ConsoleResultReporter();
+//
+//        crr.printStudentResult(student1);
+//        crr.printStudentResult(student2);
+//        crr.printStudentResult(student3);
+//        crr.printStudentResult(student4);
+//        crr.printStudentResult(student5);
 
-        crr.printStudentResult(student1);
-        crr.printStudentResult(student2);
-        crr.printStudentResult(student3);
-        crr.printStudentResult(student4);
-        crr.printStudentResult(student5);
+        //Part 4
+
+        StudentRecord[] students = {
+                                    new StudentRecord(22203082,"Thamsanqa",81),
+                                    new StudentRecord(22204092,"Gift",56),
+                                    new StudentRecord(22205076,"Thami",34),
+                                    new StudentRecord(22206089,"Nosipho",78),
+                                    new StudentRecord(22207085,"DeadPool",81),
+                                    new StudentRecord(22208067,"SpiderMan",50),
+                                    new StudentRecord(22209363,"Thor",74),
+                                    new StudentRecord(22210567,"Dr Doom",100),
+
+                                     };
+
+            for(int i = 0; i < students.length; i++){
+                System.out.println("Name: " + students[i].fullName() +
+                                    "\nScore: " + students[i].score() +
+                                    "\n================");
+            }
+        System.out.println("==================");
+        System.out.println("Advanced for Loop");
+
+            for(StudentRecord s : students){
+                ConsoleResultReporter crr = new ConsoleResultReporter();
+                crr.printStudentResult(s);
+                System.out.println("=================");
+            }
+
 
 
 
