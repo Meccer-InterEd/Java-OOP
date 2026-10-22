@@ -69,8 +69,6 @@ public class Main {
         System.out.println("Highest Mark: " + highest_mark);
 
 
-
-
 //        ENUMS - INTERFACES - RECORDS - ARRAYS - LOOPS - CONDITIONALS
 
 
@@ -83,5 +81,10 @@ public class Main {
 //        System.out.println(results.get_result_status(101));
 
 
+//        Part 2
+        StudentRecord student_record = new StudentRecord(1234, "Qiniso", 100);
+        System.out.println(student_record.full_name());
+        System.out.println(student_record.student_id());
+        System.out.println(student_record.score());
     }
 }
