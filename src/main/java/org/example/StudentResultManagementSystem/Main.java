@@ -31,6 +31,15 @@ public class Main {
         StudentRecord student4 = new StudentRecord(22206089,"Nosipho",78);
         StudentRecord student5 = new StudentRecord(22207085,"Thamsanqa",81);
 
+        //Part 3
+
+        ConsoleResultReporter crr = new ConsoleResultReporter();
+
+        crr.printStudentResult(student1);
+        crr.printStudentResult(student2);
+        crr.printStudentResult(student3);
+        crr.printStudentResult(student4);
+        crr.printStudentResult(student5);
 
 
 

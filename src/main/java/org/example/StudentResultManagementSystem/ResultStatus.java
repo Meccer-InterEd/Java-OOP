@@ -5,3 +5,5 @@ public enum ResultStatus {
     SUPPLEMENTARY,
     FAIL
 }
+
+
