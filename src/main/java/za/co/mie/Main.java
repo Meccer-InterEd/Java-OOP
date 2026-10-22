@@ -115,7 +115,8 @@ public class Main {
             reporter.printStudentResult(student_);
         }
 
-//        PART 5
+//        PART 5 AND 6
+        int distinction_count = 0;
         int pass_count_ = 0;
         int supplementary_count = 0;
         int fail_count = 0;
@@ -126,8 +127,15 @@ public class Main {
         for (StudentRecord student_ : students_) {
             ResultStatus status = reporter.determineStatus(student_.score());
 
+            switch (status) {
+                case DISTINCTION -> distinction_count++;
+                case PASS -> pass_count++;
+                case SUPPLEMENTARY -> supplementary_count++;
+                case FAIL -> fail_count++;
+            }
+
             if (status == ResultStatus.PASS) {
-                pass_count++;
+                pass_count_++;
             } else if (status == ResultStatus.SUPPLEMENTARY) {
                 supplementary_count++;
             } else if (status == ResultStatus.FAIL) {

@@ -3,15 +3,14 @@ package za.co.mie;
 public class ConsoleResultReporter implements ResultReporter {
     @Override
     public ResultStatus determineStatus(int score){
-        if (score >= 75 && score <= 100) {
+        if (score >= 80 && score <= 100) {
+            return ResultStatus.DISTINCTION;
+        } else if (score >= 75 && score <= 79) {
             return ResultStatus.PASS;
-
         } else if (score >= 50 && score <= 74) {
             return ResultStatus.SUPPLEMENTARY;
-
         } else if (score >= 0 && score <= 49) {
             return ResultStatus.FAIL;
-
         } else {
             throw new IllegalArgumentException("Score falls outside the range");
         }

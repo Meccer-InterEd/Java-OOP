@@ -1,7 +1,8 @@
 package za.co.mie;
 
 public enum ResultStatus {
-    PASS("75 - 100"),
+    DISTINCTION("80 - 100"),
+    PASS("75 - 79"),
     SUPPLEMENTARY("50 - 74"),
     FAIL("0 - 49");
 
