@@ -13,7 +13,7 @@ public interface Interfaces {
    /* •
     Methods have no bodies: By default, you only write the method names and return types.
     No curly braces {} with logic inside.
-•   Classes implement them: A class signs the contract using the implement keyword,
+•   Classes implement them: A class signs the contract using the implements keyword,
     forcing that class to write the actual code for those methods.
   • No instances: You cannot create an object out of an interface directly
    (e.g., new RemoteControl() ❌ is impossible)
