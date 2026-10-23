@@ -77,6 +77,26 @@ public class Main {
         System.out.println("The number of students who need supplementary assessment is: " + numSupplementaryStudents);
         System.out.println("-----------------------------------------------------");
 
+        int numFailedStudents = 0;
+        for (StudentRecord _studentRecord: _students) {
+            if (consoleResultReporter.determineStatus(_studentRecord.score()) == ResultStatus.resultStatus.FAIL) {
+                numFailedStudents++;
+            }
+        }
+        System.out.println("The Number of students who failed is: " + numFailedStudents);
+        System.out.println("-----------------------------------------------------");
+
+        int totalScore = 0;
+        double avgScore;
+        for (StudentRecord _studentRecord: _students) {
+            totalScore += _studentRecord.score();
+        }
+        avgScore = (double) totalScore / _students.length;
+        System.out.println("The average score for all students is: " + avgScore);
+        System.out.println("-----------------------------------------------------");
+
+
+
 
     }
 }
