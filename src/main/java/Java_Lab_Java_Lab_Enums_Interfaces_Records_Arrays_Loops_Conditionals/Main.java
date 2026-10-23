@@ -95,8 +95,20 @@ public class Main {
         System.out.println("The average score for all students is: " + avgScore);
         System.out.println("-----------------------------------------------------");
 
-
-
-
+        int highestScore = _students[0].score();
+        for (StudentRecord student : _students) {
+            if (student.score() > highestScore) {
+                highestScore = student.score();
+            }
+        }
+        System.out.print("The highest score is: " + highestScore + " and it was achieved by: ");
+        boolean first = true;
+        for (StudentRecord student : _students) {
+            if (student.score() == highestScore) {
+                if (!first) System.out.print(", ");
+                System.out.print(student.fullName());
+                first = false;
+            }
+        }
     }
 }
