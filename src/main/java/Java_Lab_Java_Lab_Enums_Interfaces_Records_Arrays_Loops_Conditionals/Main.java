@@ -96,9 +96,13 @@ public class Main {
         System.out.println("-----------------------------------------------------");
 
         int highestScore = _students[0].score();
+        int lowestScore = _students[0].score();
         for (StudentRecord student : _students) {
             if (student.score() > highestScore) {
                 highestScore = student.score();
+            }
+            if (student.score() < lowestScore) {
+                lowestScore = student.score();
             }
         }
         System.out.print("The highest score is: " + highestScore + " and it was achieved by: ");
@@ -110,5 +114,16 @@ public class Main {
                 first = false;
             }
         }
+        System.out.println("\n-----------------------------------------------------");
+        System.out.print("The Lowest score is: " + lowestScore + " and it was achieved by: ");
+        boolean last = true;
+        for (StudentRecord student : _students) {
+            if (student.score() == lowestScore) {
+                if (!last) System.out.print(", ");
+                System.out.print(student.fullName());
+                last = false;
+            }
+        }
+        System.out.println("\n-----------------------------------------------------");
     }
 }
