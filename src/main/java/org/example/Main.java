@@ -41,5 +41,16 @@ public class Main {
 
         Animal2 anim = new Dog2("Bob");
         anim.speak();
+
+        StudentRecord[] studentRecords = {
+                new StudentRecord(1, "John Doe",75),
+                new StudentRecord(2, "Sara Gwala",78),
+                new StudentRecord(3, "Kwanele Nqayi",85),
+                new StudentRecord(4, "Andile Magwaza",77),
+                new StudentRecord(5, "Tshepo Majoro",97),
+                new StudentRecord(101, "Amina Dlamini", 82),
+                new StudentRecord(102, "Tebogo Mokoena", 67),
+                new StudentRecord(103, "KG Nkosi", 43)
+        };
     }
 }
