@@ -2,17 +2,20 @@ package Java_Lab_Java_Lab_Enums_Interfaces_Records_Arrays_Loops_Conditionals;
 
 public class ResultStatus {
     public enum resultStatus {
+        DISTINCTION,
         PASS,
         SUPPLEMENTARY,
         FAIL
     }
 
     resultStatus scoreStatus(int score) {
-        if (score >= 75 && score <= 100 ) {
+        if (score >= 80 && score <= 100 ) {
+            return resultStatus.DISTINCTION;
+        } else if (score >= 75 && score <= 79) {
             return resultStatus.PASS;
-        } else if (score >= 50 && score < 75) {
+        } else if (score >= 50 && score <= 74) {
             return resultStatus.SUPPLEMENTARY;
-        } else if (score >= 0 && score < 50) {
+        } else if (score >= 0 && score <= 49) {
             return resultStatus.FAIL;
         } else {
             // If the score <= -1 or score >= 101, the program will throw an exception and points out the value

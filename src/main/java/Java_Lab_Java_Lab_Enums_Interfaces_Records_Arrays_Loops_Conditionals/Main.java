@@ -33,7 +33,7 @@ public class Main {
                 new StudentRecord(345674, "Lona Hans", 0),
                 new StudentRecord(675365, "Ditebogo Tlhakola", 50),
                 new StudentRecord(789643, "Kagiso Shaun Molefe", 77),
-                new StudentRecord(326578, "Ntiyiso Chauke", 84),
+                new StudentRecord(326578, "Ntiyiso Chauke", 79),
                 new StudentRecord(101, "Amina Dlamini", 82),
                 new StudentRecord(102, "David Mokoena", 67),
                 new StudentRecord(103, "Lerato Nkosi", 43)
@@ -57,13 +57,22 @@ public class Main {
 
         int lastIndex = _students.length - 1;
         System.out.println("Last student (Index " + lastIndex + "): " + _students[lastIndex].fullName());
+
+        System.out.println("----------------------SUMMERY REPORT-------------------------------");
+        int numDistinctionStudents= 0;
+        for (StudentRecord _studentRecord: _students) {
+            if (consoleResultReporter.determineStatus(_studentRecord.score()) == ResultStatus.resultStatus.DISTINCTION) {
+                numDistinctionStudents++;
+            }
+        }
+        System.out.println("The number of students who got a distinction is: " + numDistinctionStudents);
+
         int numPassedStudents = 0;
         for (StudentRecord _studentRecord: _students) {
             if (consoleResultReporter.determineStatus(_studentRecord.score()) == ResultStatus.resultStatus.PASS) {
                 numPassedStudents++;
             }
         }
-        System.out.println("----------------------SUMMERY REPORT-------------------------------");
         System.out.println("The number of students who passed is: " + numPassedStudents);
 
         int numSupplementaryStudents = 0;
