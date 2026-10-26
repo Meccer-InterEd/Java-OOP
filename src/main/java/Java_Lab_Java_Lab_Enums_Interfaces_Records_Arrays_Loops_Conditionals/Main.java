@@ -57,16 +57,14 @@ public class Main {
 
         int lastIndex = _students.length - 1;
         System.out.println("Last student (Index " + lastIndex + "): " + _students[lastIndex].fullName());
-        System.out.println("-----------------------------------------------------");
-
         int numPassedStudents = 0;
         for (StudentRecord _studentRecord: _students) {
             if (consoleResultReporter.determineStatus(_studentRecord.score()) == ResultStatus.resultStatus.PASS) {
                 numPassedStudents++;
             }
         }
+        System.out.println("----------------------SUMMERY REPORT-------------------------------");
         System.out.println("The number of students who passed is: " + numPassedStudents);
-        System.out.println("-----------------------------------------------------");
 
         int numSupplementaryStudents = 0;
         for (StudentRecord _studentRecord: _students) {
@@ -75,7 +73,6 @@ public class Main {
             }
         }
         System.out.println("The number of students who need supplementary assessment is: " + numSupplementaryStudents);
-        System.out.println("-----------------------------------------------------");
 
         int numFailedStudents = 0;
         for (StudentRecord _studentRecord: _students) {
@@ -84,7 +81,6 @@ public class Main {
             }
         }
         System.out.println("The Number of students who failed is: " + numFailedStudents);
-        System.out.println("-----------------------------------------------------");
 
         int totalScore = 0;
         double avgScore;
@@ -93,7 +89,6 @@ public class Main {
         }
         avgScore = (double) totalScore / _students.length;
         System.out.println("The average score for all students is: " + avgScore);
-        System.out.println("-----------------------------------------------------");
 
         int highestScore = _students[0].score();
         int lowestScore = _students[0].score();
@@ -114,8 +109,7 @@ public class Main {
                 first = false;
             }
         }
-        System.out.println("\n-----------------------------------------------------");
-        System.out.print("The Lowest score is: " + lowestScore + " and it was achieved by: ");
+        System.out.print("\nThe Lowest score is: " + lowestScore + " and it was achieved by: ");
         boolean last = true;
         for (StudentRecord student : _students) {
             if (student.score() == lowestScore) {
